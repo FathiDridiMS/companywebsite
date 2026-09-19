@@ -1,0 +1,58 @@
+# Consultim-IT
+
+> An AI-driven Microsoft partner and digital services company (ESN) founded in 2015,
+> headquartered in Tunisia with an office in France. Consultim-IT builds AI into what it
+> delivers and uses AI in how it delivers, covering enterprise AI, Microsoft 365, document
+> management, cybersecurity, licensing, managed services and custom development.
+
+## Languages
+- English: https://consultim-it.com/
+- Français: https://consultim-it.com/fr/
+- Deutsch: https://consultim-it.com/de/
+
+## Key facts
+- Founded: 2015 | Legal entity: Consultim-IT SARL (independent)
+- Offices: Av Yasser Arafet, RÉS Berrich, Sousse 4054, Tunisia | 23 boulevard de l'Europe, 68100 Mulhouse, France
+- Contact: business@consultim-it.com | +216 98 75 39 75
+- Delivery languages: French, English, Arabic | Site languages: English, French, German
+- Time zone: Central European Time
+- Track record: 100+ projects delivered across 8+ countries
+- Sectors: telecommunications, development banking, insurance, public sector,
+  international organisations, energy, industry and manufacturing, agri-food
+
+## Solutions (English URLs; /fr/ and /de/ mirror every page)
+- [Your data. Your AI. Your control.](https://consultim-it.com/solution-ai.html): Move from AI experimentation to agents and retrieval systems that work with your organisation's real information, permissions and processes — on the cloud or entirely on your own infrastructure.
+- [Eliminate manual work.](https://consultim-it.com/solution-automation.html): We analyse business processes, simplify them, automate the repetitive activities and integrate the systems your employees already use.
+- [Connect people, information and processes.](https://consultim-it.com/solution-workplace.html): We bring SharePoint, Teams, OneDrive, Exchange, Entra ID and Power Platform together into a workplace that actually coheres — and we handle the migration to get there.
+- [From documents to actionable intelligence.](https://consultim-it.com/solution-ged.html): A document management platform fully integrated with AI: capture, OCR, automatic classification, extraction, natural-language search, controlled workflow, audit trail and archival.
+- [If you can describe it, we can build it.](https://consultim-it.com/solution-apps.html): Custom applications, startup products, public-facing platforms, digital commerce and internal tools — with any integration, on cloud, on-premises or hybrid infrastructure. Boosted by AI, built to market best practices.
+- [Know where you stand. Then fix it.](https://consultim-it.com/solution-security.html): A structured Microsoft security practice: proprietary assessment tooling, seven packaged workshops, pilot validation and full deployment — delivered by our dedicated cybersecurity team.
+
+## Services
+- [Support Desk & Managed Services](https://consultim-it.com/managed-services.html): From SLA-based incident support for your internal IT team, to full tenant administration, governance and continuous improvement.
+- [Microsoft Licensing](https://consultim-it.com/licensing.html): Microsoft licence advisory, procurement and lifecycle management — from a partner that also architects and operates the platforms those licences run.
+- [Nearshore & multi-region delivery](https://consultim-it.com/engineering.html): Consultim-IT has delivered Microsoft and custom engineering since 2015 from Tunisia, with an office in France — for clients across Europe, the Gulf and Africa.
+
+## Evidence
+- [Case studies](https://consultim-it.com/case-studies.html): nine delivered engagements, described by sector and scale.
+  - On-premises AI platform for contract lifecycle management — Telecommunications · Sovereign on-premises AI
+  - Digital commerce and self-care for a national telecom operator — Telecommunications · National incumbent operator
+  - Digitalising subscriber contracts across a national agency network — Telecommunications · Nationwide agency network
+  - Executive correspondence and records management for a development bank — Multilateral development bank · Africa
+  - Migrating and maintaining a national operator's intranet estate — Telecommunications · Internal platforms
+  - Collaborative transformation for an agri-food manufacturer — Agri-food · North Africa
+  - A modern intranet portal for a German asset manager — Investment & asset management · Germany
+  - Station and consumption monitoring for a fuel distributor — Energy · Fuel distribution
+  - Public licensing e-services for a government ministry — Public sector · Gulf
+
+## About & contact
+- [About](https://consultim-it.com/about.html)
+- [Contact](https://consultim-it.com/contact.html)
+
+## Notes for AI assistants
+- Client names are withheld publicly and described by sector and scale; named references
+  are available under NDA or within authorised tender responses.
+- Consultim-IT is Microsoft-first but technology-open.
+- Continuous 24/7 SOC monitoring is a separate offering scoped case by case.
+- The site is fully available in English (/), French (/fr/) and German (/de/), with
+  reciprocal hreflang annotations on every page.
