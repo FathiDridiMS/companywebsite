@@ -439,45 +439,50 @@ footer.site a:hover{color:var(--amber)}
 
 /* ============================================================
    MOBILE HERO FIX — append to the END of css/style.css
-   Replaces the rule that pushed the diagram above the headline.
+   Tablet: diagram moves below the copy.
+   Phone:  diagram is dropped entirely; the three layer labels
+           are kept as text, because they carry the positioning.
    ============================================================ */
 
-/* Tablet and below: headline first, diagram after the CTAs.
-   This overrides the earlier `.hero-visual{order:-1}` rule. */
+/* Tablet: headline first, diagram after the CTAs.
+   Overrides the earlier `.hero-visual{order:-1}` rule. */
 @media(max-width:1000px){
   .hero-grid{grid-template-columns:1fr;gap:34px}
-  .hero-visual{order:2}                 /* was -1 — diagram now follows the copy */
-  .hero > .wrap > div:first-child{order:1}
+  .hero-visual{order:2}
   .stackfig{max-width:440px;margin:0 auto}
 }
 
-/* Phones: shrink the diagram hard and put the keys beside it,
-   so it reads as a supporting graphic rather than a splash screen. */
+/* Phone: hide the artwork, keep the meaning. */
 @media(max-width:620px){
-  .hero{padding-top:34px;padding-bottom:40px}
-  .hero-visual{margin-top:4px}
+  .hero{padding-top:34px;padding-bottom:38px}
+
+  /* The SVG is decorative here — the labels below carry the message. */
+  .stackfig-art{display:none}
 
   .stackfig{
-    grid-template-columns:minmax(0,150px) minmax(0,1fr);
-    align-items:center;
-    gap:16px;
+    grid-template-columns:1fr 1fr;
+    gap:14px 16px;
     max-width:100%;
+    margin-top:4px;
+    padding-top:22px;
+    border-top:1px solid var(--line);
   }
-  .stackfig-art{grid-column:1}
-  .stackfig-art svg{max-width:150px;margin:0 auto}
-
   .stackfig-keys{
-    grid-column:2;
-    grid-template-rows:repeat(3,auto);
-    gap:14px;
+    grid-column:1 / -1;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:none;
+    gap:14px 16px;
     height:auto;
   }
-  .stackfig-keys li{padding:0 0 0 13px}
+  .stackfig-keys li{padding:0 0 0 13px;animation:none;opacity:1}
   .stackfig-keys li::before{top:2px;height:calc(100% - 4px)}
   .stackfig-keys b{font-size:.88rem}
   .stackfig-keys span{font-size:.73rem}
+  /* Third label spans the full width so it doesn't sit alone. */
+  .stackfig-keys li:last-child{grid-column:1 / -1}
 
-  /* Tighten the hero copy so the CTA is reachable without scrolling */
+  /* Tighten the copy so the CTA is reachable without scrolling. */
   .badge-ai{margin-bottom:14px;padding:6px 13px;font-size:.72rem}
   .hero h1{font-size:1.95rem;margin-bottom:.4em}
   .hero-sub{font-size:1rem;margin-bottom:1.3em}
@@ -486,17 +491,8 @@ footer.site a:hover{color:var(--amber)}
   .proof-strip{gap:8px 18px;padding-top:18px;font-size:.81rem}
 }
 
-/* Very small screens: keys drop under the diagram, both compact. */
 @media(max-width:400px){
-  .stackfig{grid-template-columns:1fr;gap:18px}
-  .stackfig-art{grid-column:1}
-  .stackfig-art svg{max-width:170px}
-  .stackfig-keys{
-    grid-column:1;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows:none;
-    gap:12px 14px;
-  }
+  .stackfig,.stackfig-keys{grid-template-columns:1fr}
+  .stackfig-keys li:last-child{grid-column:1}
   .hero h1{font-size:1.8rem}
 }
-
