@@ -440,8 +440,8 @@ footer.site a:hover{color:var(--amber)}
 /* ============================================================
    MOBILE HERO FIX — append to the END of css/style.css
    Tablet: diagram moves below the copy.
-   Phone:  diagram is dropped entirely; the three layer labels
-           are kept as text, because they carry the positioning.
+   Phone:  hero visual removed entirely (diagram + labels), so the
+           headline, CTA and proof strip land on first screen.
    ============================================================ */
 
 /* Tablet: headline first, diagram after the CTAs.
@@ -452,47 +452,20 @@ footer.site a:hover{color:var(--amber)}
   .stackfig{max-width:440px;margin:0 auto}
 }
 
-/* Phone: hide the artwork, keep the meaning. */
+/* Phone: drop the whole hero visual and tighten the copy. */
 @media(max-width:620px){
-  .hero{padding-top:34px;padding-bottom:38px}
+  .hero{padding-top:34px;padding-bottom:40px}
+  .hero-grid{gap:0}
+  .hero-visual{display:none}
 
-  /* The SVG is decorative here — the labels below carry the message. */
-  .stackfig-art{display:none}
-
-  .stackfig{
-    grid-template-columns:1fr 1fr;
-    gap:14px 16px;
-    max-width:100%;
-    margin-top:4px;
-    padding-top:22px;
-    border-top:1px solid var(--line);
-  }
-  .stackfig-keys{
-    grid-column:1 / -1;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows:none;
-    gap:14px 16px;
-    height:auto;
-  }
-  .stackfig-keys li{padding:0 0 0 13px;animation:none;opacity:1}
-  .stackfig-keys li::before{top:2px;height:calc(100% - 4px)}
-  .stackfig-keys b{font-size:.88rem}
-  .stackfig-keys span{font-size:.73rem}
-  /* Third label spans the full width so it doesn't sit alone. */
-  .stackfig-keys li:last-child{grid-column:1 / -1}
-
-  /* Tighten the copy so the CTA is reachable without scrolling. */
   .badge-ai{margin-bottom:14px;padding:6px 13px;font-size:.72rem}
-  .hero h1{font-size:1.95rem;margin-bottom:.4em}
-  .hero-sub{font-size:1rem;margin-bottom:1.3em}
-  .hero-cta{gap:14px;margin-bottom:24px}
+  .hero h1{font-size:2rem;margin-bottom:.4em}
+  .hero-sub{font-size:1rem;margin-bottom:1.4em}
+  .hero-cta{gap:14px;margin-bottom:26px}
   .hero-cta .btn{width:100%;justify-content:center}
-  .proof-strip{gap:8px 18px;padding-top:18px;font-size:.81rem}
+  .proof-strip{gap:8px 18px;padding-top:20px;font-size:.82rem}
 }
 
 @media(max-width:400px){
-  .stackfig,.stackfig-keys{grid-template-columns:1fr}
-  .stackfig-keys li:last-child{grid-column:1}
-  .hero h1{font-size:1.8rem}
+  .hero h1{font-size:1.82rem}
 }
