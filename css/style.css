@@ -510,3 +510,34 @@ footer.site a:hover{color:var(--amber)}
   radial-gradient(900px 420px at 2% 0%,rgba(150,95,105,.38),transparent 62%),
   radial-gradient(1000px 520px at 100% 100%,rgba(88,78,170,.5),transparent 60%),
   #1B1A4C}
+
+/* ---------- Positioning: Microsoft core, open-technology orbit ---------- */
+.accent-amber{color:var(--amber-dark)}
+.tech-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.tech-copy .section-head{margin-bottom:22px}
+.tech-copy p{margin:0 0 1em}
+.orbit-wrap{container-type:inline-size;width:100%;max-width:580px;justify-self:center}
+.orbit{position:relative;width:100%;aspect-ratio:1;
+  background:radial-gradient(closest-side,rgba(66,73,140,.09),transparent 72%)}
+.ring{position:absolute;border-radius:50%;border:1px solid rgba(66,73,140,.14);animation:orbSpin 90s linear infinite}
+.ring-out{--r:46cqw;width:92%;height:92%;left:4%;top:4%}
+.ring-in{--r:26cqw;width:52%;height:52%;left:24%;top:24%;animation-direction:reverse;animation-duration:70s}
+.o{position:absolute;left:50%;top:50%;width:0;height:0;transform:rotate(var(--a)) translateY(calc(var(--r) * -1))}
+.chip-o{position:absolute;left:0;top:0;display:inline-flex;align-items:center;gap:.45em;white-space:nowrap;
+  padding:.38em .8em .38em .6em;border-radius:30px;background:#fff;border:1px solid var(--line);
+  box-shadow:0 2px 8px rgba(45,52,112,.07);color:var(--navy);font-size:clamp(.56rem,2.15cqw,.8rem);font-weight:600;
+  transform:translate(-50%,-50%) rotate(calc(var(--a) * -1));animation:orbCounter 90s linear infinite}
+.chip-o img{width:1.25em;height:1.25em;flex:none}
+.ring-out .chip-o{color:#4A4F58;font-weight:500}
+.ring-in .chip-o{border-color:var(--primary-25);animation-direction:reverse;animation-duration:70s}
+.orbit-core{position:absolute;left:50%;top:50%;width:19%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  background:linear-gradient(145deg,#3D4489,#262C63);display:grid;place-items:center;
+  box-shadow:0 0 0 8px rgba(66,73,140,.1),0 10px 30px rgba(45,52,112,.28);animation:orbPulse 4s ease-in-out infinite}
+.orbit-core svg{width:44%;height:auto}
+.orbit:hover .ring,.orbit:hover .chip-o{animation-play-state:paused}
+@keyframes orbSpin{to{transform:rotate(360deg)}}
+@keyframes orbCounter{from{transform:translate(-50%,-50%) rotate(calc(var(--a) * -1))}
+  to{transform:translate(-50%,-50%) rotate(calc(var(--a) * -1 - 360deg))}}
+@keyframes orbPulse{50%{box-shadow:0 0 0 14px rgba(66,73,140,.06),0 10px 30px rgba(45,52,112,.28)}}
+@media(prefers-reduced-motion:reduce){.ring,.chip-o,.orbit-core{animation:none}}
+@media(max-width:900px){.tech-grid{grid-template-columns:1fr}.orbit-wrap{max-width:460px}}
