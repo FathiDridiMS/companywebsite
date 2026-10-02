@@ -572,3 +572,226 @@ footer.site a.ico-link:hover .fi-wrap{border-color:var(--amber)}
   .foot-addr address{flex:1 1 0;min-width:0}
 }
 .foot-addr address{padding:18px 18px;font-size:.88rem}
+
+/* ===== Solutions pages: modern styles (from the Solutions UI work) ===== */
+/* ============================================================
+   MODERN PAGES (body.page-modern): Solutions + solution pages
+   Calm, flat, full-width bands. Minimal motion.
+   ============================================================ */
+/* No scroll-in animation; cards only shift colour on hover */
+.page-modern .reveal{opacity:1;transform:none;transition:none}
+.page-modern .card:hover{transform:none}
+
+/* Hero: no divider, no actions, content starts close to the intro */
+.page-modern .page-hero{border-bottom:0;padding-bottom:0}
+.page-modern .page-hero .lead{margin-bottom:0}
+.page-modern .page-hero + section{padding-top:clamp(30px,3.4vw,44px)}
+
+/* Consecutive sections with the same background read as one band */
+.page-modern section.bg-grey + section.bg-grey{padding-top:0}
+
+/* Two-weight headings */
+.page-modern .h-light{font-weight:400;color:var(--primary-75)}
+
+/* Cards: neutral text, brand-blue link, never amber */
+.page-modern .card{transition:border-color .2s var(--ease),box-shadow .2s var(--ease),background .2s var(--ease)}
+.page-modern .card:hover{box-shadow:var(--shadow);border-color:var(--primary-25)}
+.page-modern a.card{color:var(--body)}
+.page-modern a.card .link-arrow{color:var(--primary)}
+.page-modern a.card:hover .link-arrow{color:var(--navy)}
+
+/* Two-column text + aside */
+.split{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(32px,5vw,64px);align-items:start}
+.split-center{align-items:center}
+.split h3{margin-bottom:16px}
+
+/* Technology stack card */
+.stack-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px}
+.stack-card h3{font-size:1.12rem;margin-bottom:6px}
+.stack-group{padding:16px 0;border-bottom:1px solid var(--line)}
+.stack-group:last-child{border-bottom:0;padding-bottom:0}
+.stack-group h4{font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--primary-75);margin:0 0 10px}
+.stack-tags{display:flex;flex-wrap:wrap;gap:8px}
+.stack-tags span{font-size:.86rem;font-weight:500;color:var(--navy);background:var(--primary-05);
+  border:1px solid var(--primary-25);border-radius:8px;padding:6px 12px;line-height:1.3}
+
+/* Full-width dark band (Beyond project delivery, AI foundations, governance) */
+.page-modern section.band-dark{
+  background:
+    radial-gradient(700px 380px at 0% 0%,rgba(242,160,61,.16),transparent 70%),
+    radial-gradient(800px 460px at 100% 100%,rgba(107,114,168,.30),transparent 70%),
+    linear-gradient(135deg,#232A5E,#1B2150);
+  color:#C3C6DF}
+.band-dark .eyebrow{color:var(--amber)}
+.band-dark h2{color:#fff;font-size:clamp(1.8rem,3.4vw,2.7rem);margin:0}
+.band-dark .h-light{color:#A1A5C6}
+.band-dark .section-head{margin-bottom:clamp(28px,3.4vw,44px)}
+.band-dark .section-head .lead{color:#C3C6DF;margin:14px 0 0}
+.band-dark .card{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);color:#C3C6DF}
+.band-dark .card:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.24);box-shadow:none}
+.band-dark .card h3{color:#fff}
+.band-dark .card p{color:#C3C6DF}
+.band-dark a.card .link-arrow{color:#C3C6DF}
+.band-dark a.card:hover .link-arrow{color:#fff}
+
+/* Deployment models */
+.deploy-card{display:flex;flex-direction:column}
+.deploy-card p{flex:1}
+.deploy-key{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);
+  font-size:.86rem;font-weight:600;color:var(--primary)}
+
+/* Process steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:var(--s-gap)}
+.steps li{padding-top:18px;border-top:2px solid var(--primary-25)}
+.steps li:first-child{border-top-color:var(--primary)}
+.steps .step-num{display:block;font-size:.78rem;font-weight:700;color:var(--primary-75);letter-spacing:.08em;margin-bottom:8px}
+.steps b{display:block;color:var(--navy);font-size:1.02rem;margin-bottom:4px}
+.steps p{font-size:.9rem;margin:0}
+
+/* Audit card */
+.audit-card{padding:36px}
+.audit-card p{font-size:.95rem;margin-bottom:22px}
+.audit-card .btn{width:100%;justify-content:center}
+
+/* FAQ: brand blue instead of amber */
+.page-modern .acc-q::after{color:var(--primary)}
+
+/* Closing call to action: full-width light band, flush with the bands around it */
+.cta-band.cta-modern{text-align:left;
+  background:
+    radial-gradient(620px 340px at 100% 0%,rgba(242,160,61,.12),transparent 70%),
+    radial-gradient(720px 400px at 0% 100%,rgba(107,114,168,.16),transparent 70%),
+    var(--primary-05)}
+.cta-panel{display:grid;grid-template-columns:1.4fr 1fr;gap:12px 48px;align-items:end}
+.cta-panel .eyebrow,.cta-panel h2,.cta-panel p{grid-column:1}
+.cta-panel .eyebrow{margin-bottom:0}
+.cta-panel h2{color:var(--navy);font-size:clamp(1.7rem,3.1vw,2.45rem);margin:0}
+.cta-modern .cta-panel p{color:var(--body);margin:0;max-width:56ch}
+.cta-panel .cta-row{grid-column:2;grid-row:1 / span 3;align-self:center;justify-self:end;
+  display:grid;grid-template-columns:1fr;gap:14px;padding:16px 0}
+.cta-panel .cta-row .btn{width:100%;justify-content:center}
+
+@media(max-width:1000px){
+  .steps{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:860px){
+  .split{grid-template-columns:1fr}
+  .cta-panel{grid-template-columns:1fr}
+  .cta-panel .cta-row{grid-column:1;grid-row:auto;justify-self:stretch;margin-top:8px}
+}
+@media(max-width:560px){
+  .steps{grid-template-columns:1fr}
+  .stack-card,.audit-card{padding:24px 22px}
+}
+.faq-split{grid-template-columns:1fr 1.7fr}
+.faq-split .section-head{margin:0}
+@media(max-width:860px){.faq-split{grid-template-columns:1fr}}
+/* Solution detail pages: more air between the hero and the first content block */
+/* The hero becomes its own tinted block so the first section starts on a clean white background */
+.page-detail .page-hero{padding-top:clamp(56px,6vw,88px);padding-bottom:clamp(56px,6vw,88px);
+  background:
+    radial-gradient(640px 320px at 100% 0%,rgba(242,160,61,.10),transparent 70%),
+    var(--primary-05)}
+.page-detail .page-hero h1{margin-bottom:.4em}
+.page-detail .page-hero .lead{max-width:62ch}
+.page-detail .page-hero + section{padding-top:clamp(64px,6.5vw,96px)}
+/* Legacy components inside modern pages */
+.band-dark .pillar{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#C3C6DF;
+  transition:border-color .2s var(--ease),background .2s var(--ease)}
+.band-dark .pillar:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.24)}
+.band-dark .pillar h3{color:#fff}
+.band-dark .pillar p{color:#C3C6DF;margin:0}
+.steps-6{grid-template-columns:repeat(6,1fr)}
+.steps-4{grid-template-columns:repeat(4,1fr)}
+.page-modern .callout{border-left:3px solid var(--primary);background:var(--primary-05);border-radius:0 var(--radius) var(--radius) 0}
+@media(max-width:1000px){.steps-6,.steps-4{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.steps-6,.steps-4{grid-template-columns:1fr}}
+/* Security page components, calmer and in brand blue */
+.page-modern .offer{border-top:1px solid var(--line);transition:border-color .2s var(--ease),box-shadow .2s var(--ease)}
+.page-modern .offer:hover{transform:none;box-shadow:var(--shadow);border-color:var(--primary-25)}
+.page-modern .offer .kind,.page-modern .offer.assess .kind{background:var(--primary-05);color:var(--primary)}
+.page-modern .offer .dur{color:var(--primary)}
+.page-modern .method-step .num,.page-modern .method-step:last-child .num{background:var(--primary-05);color:var(--navy);
+  border:1px solid var(--primary-25);font-weight:700}
+.band-dark .band-tiles{margin:28px 0}
+.band-dark .band-note{color:#C3C6DF;max-width:72ch;margin-bottom:1.6em}
+.band-dark .lead b,.band-dark .band-note b{color:#fff}
+.band-dark h2 + .lead{margin-top:16px}
+.band-dark .section-head .lead{margin:16px 0 0}
+.band-dark .section-head p + p{margin-top:12px;margin-bottom:0}
+.stack-card h3 + .stack-group{padding-top:12px}
+
+/* ============================================================
+   MODERN PAGES: responsive, compact. Cards go two by two,
+   buttons keep their natural width, less vertical padding.
+   ============================================================ */
+@media(max-width:1000px){
+  .page-modern .g2,.page-modern .g3{grid-template-columns:repeat(2,1fr)}
+  /* An odd last card takes the full row instead of leaving a hole */
+  .page-modern .grid > :last-child:nth-child(odd){grid-column:1 / -1}
+}
+@media(max-width:760px){
+  .page-modern section,.page-modern .cta-band{padding-top:48px;padding-bottom:48px}
+  .page-modern .page-hero + section{padding-top:32px}
+  .page-detail .page-hero{padding-top:40px;padding-bottom:40px}
+  .page-detail .page-hero + section{padding-top:44px}
+  .page-modern section.bg-grey + section.bg-grey{padding-top:0}
+  .page-modern .section-head{margin-bottom:24px}
+  .band-dark .section-head{margin-bottom:24px}
+  .page-modern .split{gap:28px}
+
+  /* Cards */
+  .page-modern .grid{gap:12px}
+  .page-modern .card,.page-modern .offer,.band-dark .pillar{padding:18px 16px}
+  .page-modern .card h3,.page-modern .offer h3,.band-dark .pillar h3{font-size:.98rem;margin-bottom:.35em}
+  .page-modern .card p,.page-modern .offer p,.band-dark .pillar p{font-size:.86rem;line-height:1.5;margin-bottom:.6em}
+  .page-modern .card .icon{width:38px;height:38px;margin-bottom:12px}
+  .page-modern .card .icon svg{width:20px;height:20px}
+  .page-modern .card .link-arrow{font-size:.88rem}
+  .deploy-key{margin-top:12px;padding-top:10px;font-size:.8rem}
+  .page-modern .method-step{padding:16px;gap:10px}
+  .page-modern .method-step .num{flex-basis:38px;width:38px;height:38px}
+
+  /* Steps two by two */
+  .steps,.steps-4,.steps-6{grid-template-columns:repeat(2,1fr);gap:18px 14px}
+  .steps > li:last-child:nth-child(odd){grid-column:1 / -1}
+  .steps li{padding-top:12px}
+
+  /* Tech card and audit card */
+  .stack-card,.audit-card{padding:20px 18px}
+  .stack-tags span{font-size:.8rem;padding:5px 10px}
+  .audit-card .btn{width:auto}
+
+  /* FAQ two by two */
+  .faq-split > div:last-child{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;align-items:start}
+  .faq-split .acc{margin:0}
+  .page-modern .acc-q{padding:14px;font-size:.86rem;gap:10px}
+  .page-modern .acc-a p{padding:0 14px 14px;font-size:.84rem}
+
+  /* Buttons keep a natural size; CTA pair side by side, same width */
+  .page-modern .btn{padding:11px 18px;font-size:.9rem}
+  .page-modern .cta-row .btn{width:auto}
+  .cta-panel .cta-row{display:inline-grid;grid-template-columns:1fr 1fr;justify-self:start;gap:10px;padding:0}
+  .cta-panel .cta-row .btn{white-space:normal;text-align:center;line-height:1.3}
+}
+@media(max-width:420px){
+  .page-modern .card,.page-modern .offer,.band-dark .pillar{padding:16px 13px}
+  .page-modern .card p,.page-modern .offer p{font-size:.84rem}
+  .page-modern .acc-q{padding:12px;font-size:.83rem}
+}
+@media(max-width:760px){
+  .faq-split{gap:18px}
+  .faq-split > div:last-child > .acc:last-child:nth-child(odd){grid-column:1 / -1}
+}
+@media(max-width:860px){
+  .faq-split{gap:18px}
+  .faq-split .section-head h2{margin-bottom:0}
+  .faq-split > div:last-child{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;align-items:start}
+  .faq-split .acc{margin:0}
+  .faq-split > div:last-child > .acc:last-child:nth-child(odd){grid-column:1 / -1}
+}
+@media(max-width:860px){
+  .page-modern .faq-split{gap:16px}
+  .page-modern .faq-split .section-head{margin:0}
+}
