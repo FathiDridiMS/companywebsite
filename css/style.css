@@ -304,12 +304,12 @@ ul.crosses:last-child{margin-bottom:0}
 .acc.open .acc-q::after{transform:rotate(45deg)}
 .acc-a{max-height:0;overflow:hidden;transition:max-height .3s var(--ease)}
 .acc-a p{padding:0 24px 20px;margin:0;font-size:.95rem}
-.cta-band{background:linear-gradient(120deg,var(--navy),var(--primary) 62%,#4E56A0);
+.cta-band{background:radial-gradient(900px 420px at 2% 0%,rgba(150,95,105,.3),transparent 62%),radial-gradient(1000px 520px at 100% 100%,rgba(88,78,170,.45),transparent 60%),#1B1A4C;
   color:#D9DCEC;text-align:center}
 .cta-band h2{color:#fff;margin-bottom:.4em}
 .cta-band p{max-width:60ch;margin:0 auto 2em;font-size:1.07rem}
 .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.cta-inline{background:linear-gradient(120deg,var(--navy),var(--primary) 70%);border-radius:var(--radius-lg);
+.cta-inline{background:radial-gradient(700px 360px at 100% 100%,rgba(88,78,170,.45),transparent 62%),#1B1A4C;border-radius:var(--radius-lg);
   padding:44px 48px;color:#D9DCEC}
 .cta-inline h2{color:#fff}.cta-inline .lead{color:#C2C7DE}
 .form-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
