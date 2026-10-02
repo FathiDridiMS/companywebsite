@@ -23,7 +23,7 @@ body{margin:0;font-family:"Inter","Segoe UI",system-ui,-apple-system,Arial,sans-
   -webkit-font-smoothing:antialiased;overflow-x:hidden}
 img,svg{max-width:100%;display:block}
 a{color:var(--primary);text-decoration:none;transition:color .2s var(--ease)}
-a:hover{color:var(--amber-dark)}
+a:hover{color:var(--navy)}
 h1,h2,h3,h4{color:var(--navy);line-height:1.2;margin:0 0 .6em;font-weight:700;letter-spacing:-.02em}
 h1{font-size:clamp(2rem,4.4vw,3.3rem)}h2{font-size:clamp(1.55rem,2.9vw,2.25rem)}
 h3{font-size:clamp(1.1rem,1.7vw,1.32rem)}h4{font-size:1.02rem}
@@ -63,7 +63,7 @@ section + section[class*="bg-"]{padding-top:var(--s-sec)}
   font-weight:600;font-size:.97rem;border:2px solid transparent;cursor:pointer;
   transition:all .22s var(--ease);white-space:nowrap}
 .btn-primary{background:var(--amber);color:#3A2B10;box-shadow:0 4px 14px rgba(242,160,61,.32)}
-.btn-primary:hover{background:var(--amber-dark);color:#fff;transform:translateY(-2px)}
+.btn-primary:hover{background:var(--amber-dark);color:#2A1D08}
 .btn-outline{border-color:var(--primary-25);color:var(--primary)}
 .btn-outline:hover{border-color:var(--primary);background:var(--primary-05)}
 .btn-ghost-light{border-color:rgba(255,255,255,.3);color:#fff}
@@ -351,7 +351,7 @@ ul.crosses:last-child{margin-bottom:0}
 footer.site{background:var(--navy);color:#A9AEC9;padding:calc(var(--s-sec) * .62) 0 28px;font-size:.92rem}
 footer.site h4{color:#fff;font-size:.82rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:16px}
 footer.site a{color:#A9AEC9;display:block;padding:4px 0;overflow-wrap:anywhere}
-footer.site a:hover{color:var(--amber)}
+footer.site a:hover{color:#fff}
 .foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px}
 .foot-logo{display:flex;align-items:center;gap:12px;margin-bottom:18px}
 .foot-logo svg{height:36px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.28))}
@@ -559,7 +559,7 @@ footer.site a.ico-link{display:flex;align-items:center;gap:12px;padding:6px 0}
 .fi-wrap{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;flex:none;
   background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);transition:border-color .2s var(--ease)}
 .fi-wrap .fi{width:17px;height:17px}
-footer.site a.ico-link:hover .fi-wrap{border-color:var(--amber)}
+footer.site a.ico-link:hover .fi-wrap{border-color:rgba(255,255,255,.4)}
 @media(max-width:700px){.foot-top{flex-direction:column}.foot-addr{width:100%}.foot-addr address{flex:1 1 220px}}
 .foot-addr b + br{display:none}
 
