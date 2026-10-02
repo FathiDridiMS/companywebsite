@@ -352,7 +352,7 @@ footer.site{background:var(--navy);color:#A9AEC9;padding:calc(var(--s-sec) * .62
 footer.site h4{color:#fff;font-size:.82rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:16px}
 footer.site a{color:#A9AEC9;display:block;padding:4px 0;overflow-wrap:anywhere}
 footer.site a:hover{color:var(--amber)}
-.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.foot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:48px}
 .foot-logo{display:flex;align-items:center;gap:12px;margin-bottom:18px}
 .foot-logo svg{height:36px;filter:drop-shadow(0 2px 8px rgba(0,0,0,.28))}
 .foot-logo .logo-text{color:#fff;font-size:1.24rem}
@@ -541,3 +541,34 @@ footer.site a:hover{color:var(--amber)}
 @keyframes orbPulse{50%{box-shadow:0 0 0 14px rgba(66,73,140,.06),0 10px 30px rgba(45,52,112,.28)}}
 @media(prefers-reduced-motion:reduce){.ring,.chip-o,.orbit-core{animation:none}}
 @media(max-width:900px){.tech-grid{grid-template-columns:1fr}.orbit-wrap{max-width:460px}}
+
+/* ---------- Footer layout: brand + address cards on top, three aligned columns below ---------- */
+footer.site{background:
+  radial-gradient(800px 360px at 2% 0%,rgba(150,95,105,.3),transparent 62%),
+  radial-gradient(900px 420px at 100% 100%,rgba(88,78,170,.4),transparent 60%),
+  #1B1A4C}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:32px 48px;margin-bottom:48px}
+.foot-brand{max-width:480px}
+.foot-brand p{margin:0;line-height:1.65}
+.foot-addr{display:flex;gap:16px;flex-wrap:wrap}
+.foot-addr address{font-style:normal;min-width:240px;padding:18px 22px;border-radius:var(--radius-lg);
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);line-height:1.6}
+.foot-addr b{display:flex;align-items:center;gap:9px;color:#fff;font-size:.98rem;margin-bottom:6px}
+.fi{width:18px;height:18px;flex:none;fill:none;stroke:var(--amber);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+footer.site a.ico-link{display:flex;align-items:center;gap:12px;padding:6px 0}
+.fi-wrap{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;flex:none;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);transition:border-color .2s var(--ease)}
+.fi-wrap .fi{width:17px;height:17px}
+footer.site a.ico-link:hover .fi-wrap{border-color:var(--amber)}
+@media(max-width:700px){.foot-top{flex-direction:column}.foot-addr{width:100%}.foot-addr address{flex:1 1 220px}}
+.foot-addr b + br{display:none}
+
+/* Desktop: the address cards and the Contact column share one grid, so they start on the same vertical line. */
+@media(min-width:1001px){
+  .foot-top,.foot-grid{display:grid;grid-template-columns:1fr 1fr 1.6fr;gap:40px}
+  .foot-top{align-items:start}
+  .foot-brand{grid-column:1 / 3}
+  .foot-addr{grid-column:3;flex-wrap:nowrap;gap:16px}
+  .foot-addr address{flex:1 1 0;min-width:0}
+}
+.foot-addr address{padding:18px 18px;font-size:.88rem}
