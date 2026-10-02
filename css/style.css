@@ -1,3 +1,10 @@
+/* Inter (variable, weights 100-900), served from this site instead of Google Fonts */
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;
+  src:url("../assets/fonts/inter-latin-ext.woff2") format("woff2");
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Inter";font-style:normal;font-weight:100 900;font-display:swap;
+  src:url("../assets/fonts/inter-latin.woff2") format("woff2");
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 /* Consultim-IT, Delft blue #42498C + amber #F2A03D */
 :root{
   --navy:#2D3470;--primary:#42498C;--primary-75:#6B72A8;--primary-50:#A1A5C6;
@@ -924,3 +931,91 @@ footer.site a.ico-link:hover .fi-wrap{border-color:rgba(255,255,255,.4)}
 .form-status.show{display:block;background:var(--primary-05);border:1px solid var(--primary-25);color:var(--navy)}
 .form-error.show{display:block;background:#FBEDEC;border:1px solid #F0C4C0;color:#8E2B24}
 .form-error a{color:inherit;text-decoration:underline}
+
+/* Footer on tablet and phone: brand on top, link columns in pairs, then Contact (email and phone
+   side by side) and the two office addresses side by side. */
+@media(max-width:1000px){
+  footer.site > .wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px 24px}
+  footer.site .foot-top,footer.site .foot-grid{display:contents}
+  footer.site .foot-brand{grid-column:1 / -1;max-width:none;order:1}
+  footer.site .foot-grid > nav:nth-of-type(1){order:2}
+  footer.site .foot-grid > nav:nth-of-type(2){order:3}
+  /* Contact: heading and note on their own lines, email and phone next to each other */
+  footer.site .foot-grid > div:last-child{order:4;grid-column:1 / -1;display:flex;flex-wrap:wrap;align-items:center;gap:6px 28px}
+  footer.site .foot-grid > div:last-child h4{flex:0 0 100%;margin-bottom:8px}
+  footer.site .foot-grid > div:last-child p{flex:0 0 100%;margin:6px 0 0 !important}
+  /* Addresses: the two cards next to each other */
+  footer.site .foot-addr{order:5;grid-column:1 / -1;flex-direction:row;flex-wrap:nowrap;gap:14px;width:auto}
+  footer.site .foot-addr address{flex:1 1 0;min-width:0;padding:14px 16px}
+  footer.site .foot-bottom{order:6;grid-column:1 / -1;margin-top:0}
+}
+@media(max-width:480px){
+  footer.site > .wrap{gap:28px 16px}
+  footer.site .fi-wrap{width:32px;height:32px}
+  footer.site a.ico-link{gap:9px;font-size:.86rem}
+  footer.site .foot-addr{gap:10px}
+  footer.site .foot-addr address{font-size:.82rem;padding:12px 13px}
+}
+
+/* ---------- Partner logos: two-row rolling marquee (case studies hero) ---------- */
+.partner-strip{margin:34px 0 clamp(36px,4vw,56px)}
+.partner-label{margin:0 0 18px;font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--primary-75)}
+.pm-marquee{display:grid;gap:22px;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.pm-row{overflow:hidden}
+.pm-track{display:flex;width:max-content;animation:pmRoll 55s linear infinite}
+.pm-rev .pm-track{animation-direction:reverse;animation-duration:64s}
+.pm-group{display:flex;flex:none;align-items:center;padding-right:36px;gap:36px}
+.pm-item{display:flex;align-items:center;justify-content:center;flex:none;width:168px;height:78px}
+.pm-item img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.pm-marquee:hover .pm-track{animation-play-state:paused}
+@keyframes pmRoll{to{transform:translateX(-50%)}}
+@media(max-width:620px){.pm-item{width:124px;height:58px}.pm-group{gap:24px;padding-right:24px}.pm-marquee{gap:12px}}
+@media(prefers-reduced-motion:reduce){
+  .pm-track{animation:none;width:auto;flex-wrap:wrap;justify-content:center}
+  .pm-group[aria-hidden]{display:none}
+  .pm-rev{display:none}
+}
+.form-status.show.ok{background:#EAF7EE;border-color:#BCE3C8;color:#1E6B39}
+.form-status a{color:inherit;font-weight:600;text-decoration:underline}
+
+/* ---------- 404 page ---------- */
+.nf-page{display:flex;flex-direction:column;min-height:100vh}
+.nf-page main{flex:1;display:flex}
+.nf-hero{flex:1;display:flex;align-items:center;border-bottom:0}
+.nf-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,72px);align-items:center;width:100%}
+.nf-copy h1{font-size:clamp(2.1rem,4.6vw,3.4rem);margin-bottom:.35em}
+.nf-links{list-style:none;margin:6px 0 0;padding:22px 0 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 26px}
+.nf-links a{display:inline-block;padding:4px 0;font-weight:600;font-size:.95rem;color:var(--primary)}
+.nf-links a:hover{color:var(--navy)}
+.nf-art{max-width:420px;justify-self:center;width:100%}
+.nf-art svg{width:100%;height:auto;display:block;overflow:visible}
+.nf-float{animation:nfFloat 6s ease-in-out infinite}
+@keyframes nfFloat{50%{transform:translate(6px,-12px)}}
+.nf-home{padding:9px 18px;font-size:.9rem}
+footer.site.nf-foot{padding:0}
+footer.site.nf-foot > .wrap{padding-top:18px;padding-bottom:18px}
+.nf-foot .foot-bottom{border:0;padding:0}
+@media(max-width:860px){.nf-grid{grid-template-columns:1fr}.nf-art{max-width:300px;order:-1}}
+@media(prefers-reduced-motion:reduce){.nf-float{animation:none}}
+
+/* Contact page (desktop): the form card and the info cards share the same top and bottom edges */
+@media(min-width:861px){
+  .page-modern .split:has(.form-card){align-items:stretch}
+  .page-modern .split:has(.form-card) > .reveal{display:flex;flex-direction:column}
+  .page-modern .split:has(.form-card) > .reveal > .form-card{flex:1;display:flex;flex-direction:column}
+  .page-modern .form-card form[data-booking]{flex:1;grid-template-rows:auto auto auto 1fr;align-content:start}
+  .page-modern .form-card .field:has(textarea){display:flex;flex-direction:column}
+  .page-modern .form-card .field textarea{flex:1;min-height:116px}
+  .page-modern .split:has(.form-card) > .reveal:last-child{gap:18px}
+  .page-modern .split:has(.form-card) .info-block{margin-bottom:0}
+  .page-modern .split:has(.form-card) .info-block:last-child{flex:1}
+}
+@media(min-width:861px){
+  /* the two office addresses sit next to each other; Contact and RFP cards take the full width below */
+  .page-modern .split:has(.form-card) > .reveal:last-child{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;gap:18px;align-content:space-between}
+  .page-modern .split:has(.form-card) .info-block:nth-child(n+3){grid-column:1 / -1}
+  .page-modern .split:has(.form-card) .info-block:nth-child(-n+2){padding:22px 22px}
+  .page-modern .split:has(.form-card) .info-block:nth-child(n+3){display:flex;flex-direction:column;justify-content:center}
+}

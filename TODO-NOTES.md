@@ -27,3 +27,11 @@ Things we agreed to do later. Update as we go.
 - To finish: in Power Automate create a flow "When an HTTP request is received" (any user can call it), then "Send an email (V2)" to business@consultim-it.com. The browser posts JSON as plain text, so read the fields with `json(triggerBody())` (or a Parse JSON step on `string(triggerBody())`). Fields: name, organisation, email, country, topic, message, consent, language, page, sent.
 - Copy the flow's HTTP POST URL into `FORM_ENDPOINT` in `js/main.js`. The URL is public in the page source, so keep the flow limited to sending that one email.
 - Still needed: a privacy notice (the consent line has no link yet).
+
+## OVH deployment
+- Upload the contents of the site into the `www` folder of the OVH hosting. Do NOT upload: `.git`, `README.md`, `TODO-NOTES.md`, `partners/` (originals), `.nojekyll`.
+- Upload `.htaccess` too (it is a hidden file: enable "show hidden files" in the FTP client).
+- Before uploading `.htaccess`: activate the free SSL certificate for consultim-it.com AND www.consultim-it.com in the OVH control panel and wait until https works. The file redirects http to https and www to non-www (canonical: https://consultim-it.com).
+- After https works, uncomment the HSTS line in `.htaccess`.
+- Check: https://consultim-it.com/does-not-exist shows the custom 404 page with a 404 status; http:// and www. redirect to https://consultim-it.com.
+- After launch: submit sitemap.xml in Google Search Console and Bing Webmaster Tools.

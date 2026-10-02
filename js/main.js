@@ -133,16 +133,37 @@
     var error = f.querySelector('.form-error');
     var btn = f.querySelector('button[type="submit"]');
 
+    /* Show the confirmation on our page and keep a link to the booking page in case the new tab was blocked */
+    function done(tab) {
+      if (tab) { try { tab.location.href = BOOKING_URL; } catch (e) { window.open(BOOKING_URL, '_blank'); } }
+      if (status) {
+        status.textContent = f.getAttribute('data-success') || '';
+        var a = document.createElement('a');
+        a.href = BOOKING_URL; a.target = '_blank'; a.rel = 'noopener';
+        a.textContent = f.getAttribute('data-open') || BOOKING_URL;
+        status.appendChild(document.createTextNode(' '));
+        status.appendChild(a);
+        status.classList.add('show', 'ok');
+        status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      btn.disabled = false;
+      f.reset();
+    }
+
     f.addEventListener('submit', function (ev) {
       ev.preventDefault();
       if (error) error.classList.remove('show');
+      if (status) status.classList.remove('show', 'ok');
       if (!f.checkValidity()) { f.reportValidity(); return; }
       var d = {};
       new FormData(f).forEach(function (v, k) { d[k] = v; });
       if (d.website) return; /* spam trap field was filled in */
 
-      var go = function () { window.location.href = BOOKING_URL; };
-      if (!FORM_ENDPOINT) { go(); return; }
+      /* Open the booking tab now, while the click still counts as a user action, so it is not blocked */
+      var tab = window.open('', '_blank');
+      if (tab) { try { tab.opener = null; } catch (e) {} }
+
+      if (!FORM_ENDPOINT) { done(tab); return; }
 
       btn.disabled = true;
       if (status) { status.textContent = f.getAttribute('data-sending') || ''; status.classList.add('show'); }
@@ -159,11 +180,11 @@
         body: JSON.stringify(payload), signal: ctrl ? ctrl.signal : undefined
       }).then(function () {
         clearTimeout(timer);
-        if (status) status.textContent = f.getAttribute('data-success') || '';
-        setTimeout(go, 600);
+        done(tab);
       }).catch(function () {
         clearTimeout(timer);
         btn.disabled = false;
+        if (tab) { try { tab.close(); } catch (e) {} }
         if (status) status.classList.remove('show');
         if (error) { error.classList.add('show'); error.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
       });
