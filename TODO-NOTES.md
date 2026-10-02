@@ -18,4 +18,6 @@ Things we agreed to do later. Update as we go.
 - The page titles / H1s of `engineering.html` and `licensing.html` may still use the old wording - check consistency.
 
 ## Other open items
-- Home page `<title>`, meta descriptions and the "An AI-driven Microsoft partner..." sentence (`index.html`, FR, DE) still use the "AI-driven" wording.
+- Home hero H1 differs by language on purpose (EN: "Build smarter. Secure better. Scale faster."; FR/DE are Microsoft + AI focused). Decide whether EN should match.
+- The Contact page still shows a visible developer note under the form ("This form is a front-end demonstration..."). Remove or wire the form before launch.
+- Friend's Solutions-page CSS still has a blue left stripe on callouts and a thin top line on offer cards (`.page-modern .callout`, `.page-modern .offer`). Left as-is per merge rule.
