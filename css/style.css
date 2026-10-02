@@ -113,9 +113,14 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);
   font-size:.87rem;color:#6B7280;font-weight:500}
 .proof-strip b{color:var(--navy);font-weight:700}
 
+/* Desktop: pin the figure to the top of the hero so it sits in the same spot in every
+   language, regardless of how long the translated headline/paragraph is. */
+@media(min-width:1001px){.hero-visual{align-self:start;padding-top:48px}}
+.stackfig-keys b,.stackfig-keys span{overflow-wrap:anywhere}
+
 /* Hero figure: diagram and labels in separate grid columns — cannot overlap */
 .hero-visual{display:flex;justify-content:center;align-items:center;width:100%;min-width:0}
-.stackfig{display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,178px);
+.stackfig{display:grid;grid-template-columns:minmax(0,1fr) 178px;
   align-items:center;gap:clamp(10px,1.6vw,20px);width:100%;max-width:520px}
 .stackfig-art{grid-column:1;min-width:0}
 .stackfig-art svg{width:100%;height:auto;display:block}
