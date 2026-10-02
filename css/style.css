@@ -1019,3 +1019,7 @@ footer.site.nf-foot > .wrap{padding-top:18px;padding-bottom:18px}
   .page-modern .split:has(.form-card) .info-block:nth-child(-n+2){padding:22px 22px}
   .page-modern .split:has(.form-card) .info-block:nth-child(n+3){display:flex;flex-direction:column;justify-content:center}
 }
+
+/* Contact page: FAQ first, then the enquiry and RFP cards on a light band */
+.contact-info .info-block{background:#fff;border:1px solid var(--line);margin-bottom:0}
+.contact-info .info-block h4{font-size:1.05rem}
