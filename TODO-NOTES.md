@@ -14,7 +14,7 @@ Things we agreed to do later. Update as we go.
 - Labels normalised to short nouns, standard-navbar style. EN: Home, Solutions, Managed Services, Licensing, Engineering, Case Studies, Contact Us.
 - FR unchanged apart from the merge: Accueil, Solutions, Services manag&eacute;s, Licences, Ing&eacute;nierie, R&eacute;f&eacute;rences, Contact.
 - DE: Lizenzierung -> **Lizenzen**, Engineering-Teams -> **Engineering**, Ueber uns + Kontakt -> **Kontakt**. Header labels no longer wrap onto two lines.
-- Open question: "Managed Services" is kept as the English term in DE; consider a German noun if wanted.
+- "Managed Services" renamed to **IT Support** (FR: Support IT, DE: IT-Support) because the page is a Microsoft 365 support desk (SLA-based incident handling) plus optional full tenant administration. The page H1 and footer link still say "Support Desk & Managed Services"; align them if wanted.
 - The page titles / H1s of `engineering.html` and `licensing.html` may still use the old wording - check consistency.
 
 ## Other open items
