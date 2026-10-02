@@ -1,4 +1,4 @@
-/* Consultim-IT — Delft blue #42498C + amber #F2A03D */
+/* Consultim-IT, Delft blue #42498C + amber #F2A03D */
 :root{
   --navy:#2D3470;--primary:#42498C;--primary-75:#6B72A8;--primary-50:#A1A5C6;
   --primary-25:#C3C6DF;--primary-05:#F2F3F8;
@@ -33,7 +33,7 @@ p{margin:0 0 1.1em}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--s-gut)}
 
 /* ============================================================
-   SECTION RHYTHM — ONE scale, applied identically everywhere.
+   SECTION RHYTHM, ONE scale, applied identically everywhere.
    Every section gets the same top and bottom padding. There are
    no collapsing rules and no per-page exceptions: that is what
    makes the spacing read as consistent across the whole site.
@@ -118,7 +118,7 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);
 @media(min-width:1001px){.hero-visual{align-self:start;padding-top:48px}}
 .stackfig-keys b,.stackfig-keys span{overflow-wrap:anywhere}
 
-/* Hero figure: diagram and labels in separate grid columns — cannot overlap */
+/* Hero figure: diagram and labels in separate grid columns, cannot overlap */
 .hero-visual{display:flex;justify-content:center;align-items:center;width:100%;min-width:0}
 .stackfig{display:grid;grid-template-columns:minmax(0,1fr) 178px;
   align-items:center;gap:clamp(10px,1.6vw,20px);width:100%;max-width:520px}
@@ -429,7 +429,7 @@ footer.site a:hover{color:#fff}
 }
 
 /* ============================================================
-   MOBILE HERO FIX — append to the END of css/style.css
+   MOBILE HERO FIX, append to the END of css/style.css
    Tablet: diagram moves below the copy.
    Phone:  hero visual removed entirely (diagram + labels), so the
            headline, CTA and proof strip land on first screen.
