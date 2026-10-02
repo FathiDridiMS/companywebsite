@@ -1,6 +1,6 @@
 # Consultim-IT
 
-> An AI-driven Microsoft partner and digital services company (ESN) founded in 2015,
+> A Microsoft partner and digital services company (ESN) founded in 2015,
 > headquartered in Tunisia with an office in France. Consultim-IT builds AI into what it
 > delivers and uses AI in how it delivers, covering enterprise AI, Microsoft 365, document
 > management, cybersecurity, licensing, managed services and custom development.
