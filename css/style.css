@@ -166,9 +166,12 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);
   display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 .card .icon svg{width:24px;height:24px;stroke:var(--primary);fill:none;stroke-width:1.9;
   stroke-linecap:round;stroke-linejoin:round}
-.challenge{display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  padding:24px 26px;transition:all .22s var(--ease);border-left:3px solid var(--primary-25)}
-.challenge:hover{border-left-color:var(--amber);transform:translateX(4px);box-shadow:var(--shadow)}
+.challenge{position:relative;display:block;background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
+  padding:26px 56px 26px 28px;transition:all .22s var(--ease)}
+.challenge::after{content:"\2192";position:absolute;right:26px;top:50%;transform:translate(-6px,-50%);font-size:1.15rem;
+  color:var(--primary);opacity:0;transition:all .22s var(--ease)}
+.challenge:hover{border-color:var(--primary-50);transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.challenge:hover::after{opacity:1;transform:translate(0,-50%)}
 .challenge strong{display:block;color:var(--navy);font-size:1.02rem;margin-bottom:5px}
 .challenge span{font-size:.88rem;color:#767C88}
 .pillar{padding:30px;border-radius:var(--radius-lg);background:#fff;border:1px solid var(--line)}
