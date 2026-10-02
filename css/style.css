@@ -808,3 +808,110 @@ footer.site a.ico-link:hover .fi-wrap{border-color:rgba(255,255,255,.4)}
   .mq-group[aria-hidden]{display:none}
   .mq-rev{display:none}
 }
+
+/* ===== Modern layout for the remaining pages and case studies (from the Case Studies UI update) ===== */
+/* Two consecutive white sections read as one: no double padding */
+.page-modern main > section:not([class]) + section:not([class]){padding-top:0}
+/* Contact form: short fields two per row */
+.page-modern form[data-demo]{display:grid;grid-template-columns:1fr 1fr;column-gap:14px}
+.page-modern form[data-demo] > :nth-child(n+5){grid-column:1 / -1}
+@media(max-width:760px){
+  /* Service tiers hold long lists: keep them one per row */
+  .page-modern .grid:has(> .tier){grid-template-columns:1fr}
+  .page-modern .tier{padding:20px 18px}
+  /* SLA priorities two by two, compact */
+  .page-modern .sla-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .page-modern .sla-card{padding:16px 14px}
+  .page-modern .sla-card>p{font-size:.84rem;margin-bottom:10px}
+  .page-modern .sla-card dl{padding-top:10px}
+  .page-modern .sla-card dd{font-size:.82rem;margin-bottom:8px}
+  .page-modern .field{margin-bottom:12px}
+  .page-modern .field label{font-size:.8rem}
+  .page-modern .field input,.page-modern .field select{padding:10px 12px}
+}
+
+/* ---- Site-wide modern pages: remaining blocks, mobile two by two ---- */
+@media(max-width:760px){
+  /* Contact details: two by two */
+  .page-modern .info-block{margin-bottom:0;padding:16px 14px}
+  .page-modern .info-block h4{font-size:.92rem}
+  .page-modern .info-block p,.page-modern .info-block address{font-size:.84rem}
+  .page-modern :has(> .info-block){display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .page-modern :has(> .info-block) > .info-block:last-child:nth-child(odd){grid-column:1 / -1}
+  /* Stacked pillars (About, Engineering) two by two */
+  .page-modern .grid[style*="gap:14px"]{grid-template-columns:1fr 1fr;gap:12px !important}
+  .page-modern .grid[style*="gap:14px"] > :last-child:nth-child(odd){grid-column:1 / -1}
+  .page-modern .pillar{padding:16px 14px}
+  .page-modern .pillar h3{font-size:.96rem}
+  .page-modern .pillar p{font-size:.84rem}
+  /* Engineering model cards and stats */
+  .page-modern .model-card{padding:18px 16px}
+  .page-modern .model-card h3{font-size:1rem}
+  .page-modern .model-card>p{font-size:.85rem;margin-bottom:12px}
+  .page-modern .stats{grid-template-columns:1fr 1fr;gap:12px}
+  .page-modern .stat{padding:16px 10px}
+  .page-modern .stat .n{font-size:1.6rem}
+  /* Case studies: compact detail blocks, facts two by two */
+  .page-modern .case-detail-body{padding:20px 16px}
+  .page-modern .case-facts{grid-template-columns:1fr 1fr;gap:10px}
+  /* Plain lists of short items two by two */
+  .page-modern .split-center ul.plain{display:grid;grid-template-columns:1fr 1fr;column-gap:14px}
+  .page-modern ul.plain li{font-size:.86rem;padding:8px 0}
+}
+@media(max-width:760px){
+  .page-modern .info-block:nth-child(n+3){grid-column:1 / -1}
+}
+@media(max-width:760px){
+  .page-modern .model-best{padding:12px;font-size:.82rem;line-height:1.45}
+}
+/* Two-column short lists on mobile (e.g. profiles we deploy) */
+@media(max-width:760px){
+  .page-modern ul.list-2col{display:grid;grid-template-columns:1fr 1fr;column-gap:14px}
+  .page-modern ul.list-2col li{font-size:.84rem;padding:8px 0;line-height:1.35}
+  .page-modern ul.list-2col li:nth-last-child(2):nth-child(odd){border-bottom:0}
+}
+
+/* ---- Case studies: compact cards, details on demand ---- */
+.page-modern .case-detail{box-shadow:none;margin-bottom:18px}
+.page-modern .case-detail-body{padding:28px 32px}
+.case-head .case-meta{margin-bottom:6px}
+.case-head h2{font-size:1.3rem;margin:0 0 16px}
+.page-modern .case-facts{grid-template-columns:repeat(4,1fr);gap:10px 18px;padding:14px 16px;margin-bottom:16px}
+.page-modern .case-facts div b{font-size:.86rem;line-height:1.4}
+.page-modern .block-label{margin-bottom:6px}
+.case-result{padding:0}
+.case-result p{margin:0;font-size:.95rem;color:var(--ink)}
+.case-more{margin-top:16px;border-top:1px solid var(--line)}
+.case-more summary{list-style:none;cursor:pointer;padding:14px 0 0;font-weight:600;font-size:.92rem;
+  color:var(--primary);display:inline-flex;align-items:center;gap:8px}
+.case-more summary::-webkit-details-marker{display:none}
+.case-more summary::after{content:"+";font-size:1.2rem;line-height:1;font-weight:400}
+.case-more[open] summary::after{content:"\2212"}
+.case-more summary:hover{color:var(--navy)}
+.case-more-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 36px;margin-top:18px}
+.case-more-grid p{font-size:.92rem}
+.case-more-grid ul.plain li{font-size:.9rem;padding:7px 0}
+.case-tech{margin-top:6px}
+.case-tech .chips{margin-top:4px}
+@media(max-width:860px){
+  .page-modern .case-facts{grid-template-columns:1fr 1fr}
+  .case-more-grid{grid-template-columns:1fr;gap:0}
+}
+@media(max-width:760px){
+  .page-modern .case-detail-body{padding:18px 16px}
+  .case-head h2{font-size:1.1rem;margin-bottom:12px}
+  .page-modern .case-facts{padding:10px 12px;gap:8px 12px}
+  .page-modern .case-facts div b{font-size:.8rem}
+  .case-result p{font-size:.86rem}
+  .case-more-grid p,.case-more-grid ul.plain li{font-size:.85rem}
+}
+/* Case studies two by two; an opened case takes the full row and the next card moves down */
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}
+.page-modern .case-grid .case-detail{margin-bottom:0}
+.case-grid .case-detail:has(details[open]){grid-column:1 / -1}
+.case-grid .case-facts{grid-template-columns:1fr 1fr}
+.case-grid .case-detail:has(details[open]) .case-facts{grid-template-columns:repeat(4,1fr)}
+@media(max-width:760px){
+  .case-grid{grid-template-columns:1fr;gap:14px}
+  .case-grid .case-detail:has(details[open]) .case-facts{grid-template-columns:1fr 1fr}
+}

@@ -135,3 +135,45 @@
     if (a.getAttribute('href') === here) a.classList.add('active');
   });
 })();
+
+/* Case studies: two by two. One case open at a time; the opened case takes the
+   full row where it stands and its neighbour moves down. A deep link (#id) opens it. */
+(function () {
+  var grid = document.querySelector('.case-grid');
+  if (!grid) return;
+  var cards = [].slice.call(grid.querySelectorAll('.case-detail'));
+  var twoCols = window.matchMedia('(min-width: 761px)');
+
+  function layout() {
+    cards.forEach(function (c, i) { c.style.order = i * 2; });
+    if (!twoCols.matches) return;
+    var visible = cards.filter(function (c) { return c.style.display !== 'none'; });
+    visible.forEach(function (c, pos) {
+      if (pos % 2 === 1 && c.querySelector('details.case-more').open) {
+        c.style.order = parseInt(visible[pos - 1].style.order, 10) - 1;
+      }
+    });
+  }
+
+  cards.forEach(function (c) {
+    var d = c.querySelector('details.case-more');
+    if (!d) return;
+    d.addEventListener('toggle', function () {
+      if (d.open) {
+        cards.forEach(function (o) {
+          var od = o.querySelector('details.case-more');
+          if (o !== c && od && od.open) od.open = false;
+        });
+      }
+      layout();
+    });
+  });
+  document.querySelectorAll('.filter').forEach(function (b) { b.addEventListener('click', layout); });
+  if (twoCols.addEventListener) twoCols.addEventListener('change', layout);
+  layout();
+
+  var id = location.hash.slice(1);
+  var target = id && document.getElementById(id);
+  var td = target && target.querySelector('details.case-more');
+  if (td) { td.open = true; target.scrollIntoView(); }
+})();
