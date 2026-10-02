@@ -494,3 +494,7 @@ footer.site a:hover{color:var(--amber)}
 @media(max-width:420px){
   .langsw-btn{padding:6px 9px;gap:6px}
 }
+
+/* Header nav: single-line labels, aligned in every language (DE/FR labels are longer). */
+.logo-text{white-space:nowrap}
+.nav-links>li>a{white-space:nowrap}
