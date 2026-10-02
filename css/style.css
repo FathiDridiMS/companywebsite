@@ -189,8 +189,11 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);
   font-size:.87rem;font-weight:600;color:var(--navy)}
 .case-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);
   overflow:hidden;transition:all .25s var(--ease);display:flex;flex-direction:column}
-.case-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.case-card,.case-card:hover{color:var(--body)}
+.case-card:hover{border-color:var(--primary-50);box-shadow:var(--shadow)}
+.case-card:hover h3{color:var(--primary)}
 .case-band{height:5px;background:linear-gradient(90deg,var(--navy),var(--primary-75),var(--amber))}
+.case-card .case-band{display:none}
 .case-body{padding:28px;flex:1;display:flex;flex-direction:column}
 .case-meta{font-size:.76rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
   color:var(--amber-dark);margin-bottom:11px}
