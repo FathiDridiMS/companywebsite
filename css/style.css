@@ -335,8 +335,8 @@ ul.crosses:last-child{margin-bottom:0}
   font-size:.87rem;font-weight:600;color:var(--body);cursor:pointer;transition:all .2s var(--ease);font-family:inherit}
 .filter:hover{border-color:var(--primary-50)}
 .filter.active{background:var(--navy);border-color:var(--navy);color:#fff}
-.callout{border-left:4px solid var(--amber);background:var(--amber-soft);padding:20px 24px;
-  border-radius:0 var(--radius) var(--radius) 0;margin:26px 0}
+.callout{border:1px solid var(--line);background:var(--primary-05);padding:20px 24px;
+  border-radius:var(--radius);margin:26px 0}
 .callout:last-child{margin-bottom:0}
 .callout p{margin:0;font-size:.95rem}.callout p+p{margin-top:.7em}
 .deploy{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px 0}
