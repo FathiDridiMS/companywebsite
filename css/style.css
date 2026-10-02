@@ -159,7 +159,8 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);
 .g4{grid-template-columns:repeat(4,1fr)}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:30px;
   transition:all .25s var(--ease)}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--primary-25)}
+.card:hover{box-shadow:var(--shadow);border-color:var(--primary-50)}
+a.card,a.card:hover{color:var(--body)}
 .card h3{margin-bottom:.45em;font-size:1.12rem}
 .card p{font-size:.95rem;margin-bottom:.9em}.card p:last-child{margin-bottom:0}
 .card .icon{width:46px;height:46px;border-radius:11px;background:var(--primary-05);
