@@ -205,7 +205,7 @@ a.card,a.card:hover{color:var(--body)}
   color:var(--primary);font-weight:600}
 .case-detail{border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;
   margin-bottom:var(--s-gap);background:#fff}
-.case-detail .case-band{height:6px}
+.case-detail .case-band{display:none}
 .case-detail-body{padding:34px 36px}
 .case-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(176px,1fr));gap:18px;
   padding:20px 22px;background:var(--grey);border-radius:var(--radius);margin:20px 0 24px}
