@@ -50,16 +50,16 @@
 <span class="eyebrow">Kontakt</span><h1>Lassen Sie uns über Ihr Vorhaben sprechen.</h1><p class="lead">Beschreiben Sie kurz Ihre Ziele, Rahmenbedingungen und Herausforderungen. Ein Architekt ordnet die Anforderungen ein und bespricht mit Ihnen eine sinnvolle Vorgehensweise.</p></div></div>
 <section><div class="wrap"><div class="split">
 <div class="reveal"><div class="form-card"><h3>Gespräch vereinbaren</h3>
-<form data-demo>
+<form class="contact-form" data-booking data-sending="Wird gesendet…" data-success="Vielen Dank. Sie werden zur Terminauswahl weitergeleitet…" novalidate>
 <div class="field"><label for="name">Vollst&auml;ndiger Name</label><input id="name" name="name" type="text" required></div>
 <div class="field"><label for="org">Organisation</label><input id="org" name="org" type="text" required></div>
 <div class="field"><label for="email">Gesch&auml;ftliche E-Mail</label><input id="email" name="email" type="email" required></div>
 <div class="field"><label for="country">Land</label><input id="country" name="country" type="text"></div>
 <div class="field"><label for="topic">Wor&uuml;ber m&ouml;chten Sie sprechen?</label><select id="topic" name="topic"><option>Enterprise-KI &amp; Agenten</option><option>Souver&auml;ne / On-Premises-KI-Bereitstellung</option><option>KI-gest&uuml;tztes Dokumentenmanagement</option><option>Gesch&auml;ftsprozess-Automatisierung</option><option>Microsoft 365 &amp; Digital Workplace</option><option>Microsoft-Security-Assessment oder -Workshop</option><option>Eine Individualanwendung oder ein Startup-Produkt</option><option>Digital-Commerce-Plattform</option><option>IT-Support oder Managed Services</option><option>Microsoft-Lizenzierung</option><option>Engineering-Kapazität / dediziertes Team</option></select></div>
 <div class="field"><label for="msg">Kurz gefasst: Was wollen Sie erreichen?</label><textarea id="msg" name="msg"></textarea></div>
-<button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Gespr&auml;ch anfragen</button>
-<div class="form-success">Vielen Dank. Ihre Anfrage ist bei uns eingegangen, und wir melden uns innerhalb eines Arbeitstags.</div>
-<p class="form-note">Dieses Formular ist eine Frontend-Demonstration. Binden Sie es vor dem Livegang an Ihren Mail-Dienst, Ihr CRM oder einen Power-Automate-Flow an.</p>
+<div class="field hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div><label class="consent"><input type="checkbox" name="consent" required><span>Ich bin damit einverstanden, dass Consultim-IT diese Angaben verwendet, um meine Anfrage zu beantworten und ein Gespräch zu vereinbaren.</span></label><button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Weiter zur Terminbuchung</button>
+<div class="form-status" role="status" aria-live="polite"></div><div class="form-error" role="alert">Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie an <a href="mailto:business@consultim-it.com">business@consultim-it.com</a>.</div>
+<p class="form-note">Nach dem Absenden wählen Sie in Microsoft Bookings einen Termin für das Gespräch.</p>
 </form></div></div>
 <div class="reveal">
 <div class="info-block"><h4>Tunesien, Hauptsitz</h4><address>Av Yasser Arafet, R&Eacute;S Berrich<br>Sousse 4054, Tunesien</address></div>

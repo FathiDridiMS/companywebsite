@@ -21,3 +21,9 @@ Things we agreed to do later. Update as we go.
 - Home hero H1 differs by language on purpose (EN: "Build smarter. Secure better. Scale faster."; FR/DE are Microsoft + AI focused). Decide whether EN should match.
 - The Contact page still shows a visible developer note under the form ("This form is a front-end demonstration..."). Remove or wire the form before launch.
 - Friend's Solutions-page CSS still has a blue left stripe on callouts and a thin top line on offer cards (`.page-modern .callout`, `.page-modern .offer`). Left as-is per merge rule.
+
+## Contact form to Microsoft Bookings (set-up needed)
+- The site side is done: `js/main.js` sends the form to `FORM_ENDPOINT`, then redirects to the Bookings page (`BOOKING_URL`). `FORM_ENDPOINT` is **empty**, so for now visitors go straight to Bookings and what they typed in the form is not saved.
+- To finish: in Power Automate create a flow "When an HTTP request is received" (any user can call it), then "Send an email (V2)" to business@consultim-it.com. The browser posts JSON as plain text, so read the fields with `json(triggerBody())` (or a Parse JSON step on `string(triggerBody())`). Fields: name, organisation, email, country, topic, message, consent, language, page, sent.
+- Copy the flow's HTTP POST URL into `FORM_ENDPOINT` in `js/main.js`. The URL is public in the page source, so keep the flow limited to sending that one email.
+- Still needed: a privacy notice (the consent line has no link yet).

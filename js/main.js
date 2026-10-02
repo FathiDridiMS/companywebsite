@@ -121,12 +121,52 @@
     }
   }
 
-  document.querySelectorAll('form[data-demo]').forEach(function (f) {
+  /* Contact form: send the details to the business mailbox, then open the Microsoft Bookings page.
+     FORM_ENDPOINT is the URL of the Power Automate flow ("When an HTTP request is received" ->
+     "Send an email (V2)" to business@consultim-it.com). While it is empty, visitors go straight to
+     the booking page (Bookings collects their name and email itself). */
+  var BOOKING_URL = 'https://bookings.cloud.microsoft/bookwithme/user/1c5d01a02d78481c9f96da31aaf60afd%40consultim-it.com/meetingtype/GDlLBOOVQkm81cm6lvuwYg2?bookingcode=de9d51d5-3a09-4f76-a5e4-484b9170574a&anonymous&ismsaljsauthenabled';
+  var FORM_ENDPOINT = '';
+
+  document.querySelectorAll('form[data-booking]').forEach(function (f) {
+    var status = f.querySelector('.form-status');
+    var error = f.querySelector('.form-error');
+    var btn = f.querySelector('button[type="submit"]');
+
     f.addEventListener('submit', function (ev) {
       ev.preventDefault();
-      var ok = f.querySelector('.form-success');
-      if (ok) { ok.classList.add('show'); ok.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
-      f.reset();
+      if (error) error.classList.remove('show');
+      if (!f.checkValidity()) { f.reportValidity(); return; }
+      var d = {};
+      new FormData(f).forEach(function (v, k) { d[k] = v; });
+      if (d.website) return; /* spam trap field was filled in */
+
+      var go = function () { window.location.href = BOOKING_URL; };
+      if (!FORM_ENDPOINT) { go(); return; }
+
+      btn.disabled = true;
+      if (status) { status.textContent = f.getAttribute('data-sending') || ''; status.classList.add('show'); }
+      var payload = {
+        name: d.name, organisation: d.org, email: d.email, country: d.country || '',
+        topic: d.topic || '', message: d.msg || '', consent: !!d.consent,
+        language: document.documentElement.lang || 'en', page: location.href, sent: new Date().toISOString()
+      };
+      var ctrl = window.AbortController ? new AbortController() : null;
+      var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 10000);
+      /* text/plain + no-cors avoids a cross-site preflight that Power Automate does not answer */
+      fetch(FORM_ENDPOINT, {
+        method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(payload), signal: ctrl ? ctrl.signal : undefined
+      }).then(function () {
+        clearTimeout(timer);
+        if (status) status.textContent = f.getAttribute('data-success') || '';
+        setTimeout(go, 600);
+      }).catch(function () {
+        clearTimeout(timer);
+        btn.disabled = false;
+        if (status) status.classList.remove('show');
+        if (error) { error.classList.add('show'); error.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+      });
     });
   });
 

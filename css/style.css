@@ -813,8 +813,8 @@ footer.site a.ico-link:hover .fi-wrap{border-color:rgba(255,255,255,.4)}
 /* Two consecutive white sections read as one: no double padding */
 .page-modern main > section:not([class]) + section:not([class]){padding-top:0}
 /* Contact form: short fields two per row */
-.page-modern form[data-demo]{display:grid;grid-template-columns:1fr 1fr;column-gap:14px}
-.page-modern form[data-demo] > :nth-child(n+5){grid-column:1 / -1}
+.page-modern form[data-booking]{display:grid;grid-template-columns:1fr 1fr;column-gap:14px}
+.page-modern form[data-booking] > :nth-child(n+5){grid-column:1 / -1}
 @media(max-width:760px){
   /* Service tiers hold long lists: keep them one per row */
   .page-modern .grid:has(> .tier){grid-template-columns:1fr}
@@ -915,3 +915,12 @@ footer.site a.ico-link:hover .fi-wrap{border-color:rgba(255,255,255,.4)}
   .case-grid{grid-template-columns:1fr;gap:14px}
   .case-grid .case-detail:has(details[open]) .case-facts{grid-template-columns:1fr 1fr}
 }
+
+/* Contact form: spam trap, consent line, status and error messages */
+.field.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consent{display:flex;gap:10px;align-items:flex-start;margin:4px 0 18px;font-size:.88rem;line-height:1.5;color:var(--body);cursor:pointer}
+.consent input{margin-top:3px;flex:none;width:17px;height:17px;accent-color:var(--primary)}
+.form-status,.form-error{display:none;padding:14px 16px;border-radius:8px;font-size:.92rem;margin-top:14px}
+.form-status.show{display:block;background:var(--primary-05);border:1px solid var(--primary-25);color:var(--navy)}
+.form-error.show{display:block;background:#FBEDEC;border:1px solid #F0C4C0;color:#8E2B24}
+.form-error a{color:inherit;text-decoration:underline}

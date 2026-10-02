@@ -51,16 +51,16 @@
 <span class="eyebrow">Contact</span><h1>Parlons de votre projet et de vos priorités.</h1><p class="lead">Présentez-nous votre contexte, vos contraintes et le résultat attendu. Un architecte vous aidera à identifier l’approche la plus pertinente, sans présentation commerciale inutile.</p></div></div>
 <section><div class="wrap"><div class="split">
 <div class="reveal"><div class="form-card"><h3>Planifier un appel</h3>
-<form data-demo>
+<form class="contact-form" data-booking data-sending="Envoi en cours…" data-success="Merci. Nous vous redirigeons pour choisir un créneau…" novalidate>
 <div class="field"><label for="name">Nom complet</label><input id="name" name="name" type="text" required></div>
 <div class="field"><label for="org">Organisation</label><input id="org" name="org" type="text" required></div>
 <div class="field"><label for="email">E-mail professionnel</label><input id="email" name="email" type="email" required></div>
 <div class="field"><label for="country">Pays</label><input id="country" name="country" type="text"></div>
 <div class="field"><label for="topic">De quoi souhaitez-vous discuter ?</label><select id="topic" name="topic"><option>IA d'entreprise, agents &amp; RAG</option><option>D&eacute;ploiement IA souverain / sur site</option><option>GED augment&eacute;e par l'IA</option><option>Automatisation des processus m&eacute;tier</option><option>Microsoft 365 &amp; espace de travail</option><option>Audit ou atelier de s&eacute;curit&eacute; Microsoft</option><option>Une application sur mesure ou un produit de startup</option><option>Plateforme de commerce numérique</option><option>Support IT ou services manag&eacute;s</option><option>Licences Microsoft</option><option>Capacit&eacute; d'ing&eacute;nierie / &eacute;quipe d&eacute;di&eacute;e</option></select></div>
 <div class="field"><label for="msg">En quelques mots, que cherchez-vous &agrave; accomplir ?</label><textarea id="msg" name="msg"></textarea></div>
-<button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Demander l'&eacute;change</button>
-<div class="form-success">Merci, votre demande a bien été enregistrée. Nous revenons vers vous dans un délai d'un jour ouvré.</div>
-<p class="form-note">Ce formulaire est une d&eacute;monstration front-end. Connectez-le &agrave; votre service de messagerie, votre CRM ou un flux Power Automate avant la mise en ligne.</p>
+<div class="field hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div><label class="consent"><input type="checkbox" name="consent" required><span>J'accepte que Consultim-IT utilise ces informations pour répondre à ma demande et organiser un appel.</span></label><button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Continuer vers la réservation</button>
+<div class="form-status" role="status" aria-live="polite"></div><div class="form-error" role="alert">Votre demande n'a pas pu être envoyée. Veuillez réessayer ou écrire à <a href="mailto:business@consultim-it.com">business@consultim-it.com</a>.</div>
+<p class="form-note">Après l'envoi, vous choisirez un créneau pour l'appel dans Microsoft Bookings.</p>
 </form></div></div>
 <div class="reveal">
 <div class="info-block"><h4>Tunisie, si&egrave;ge social</h4><address>Av Yasser Arafet, R&Eacute;S Berrich<br>Sousse 4054, Tunisie</address></div>

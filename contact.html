@@ -50,16 +50,16 @@
 <span class="eyebrow">Contact</span><h1>Tell us what you need to achieve.</h1><p class="lead">A 30-minute call with an architect who has delivered the kind of work you are considering. No obligation.</p></div></div>
 <section><div class="wrap"><div class="split">
 <div class="reveal"><div class="form-card"><h3>Schedule a Call</h3>
-<form data-demo>
+<form class="contact-form" data-booking data-sending="Sending…" data-success="Thank you. Redirecting you to choose a time…" novalidate>
 <div class="field"><label for="name">Full name</label><input id="name" name="name" type="text" required></div>
 <div class="field"><label for="org">Organisation</label><input id="org" name="org" type="text" required></div>
 <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" required></div>
 <div class="field"><label for="country">Country</label><input id="country" name="country" type="text"></div>
 <div class="field"><label for="topic">What would you like to discuss?</label><select id="topic" name="topic"><option>Enterprise AI, agents &amp; RAG</option><option>Sovereign / on-premises AI deployment</option><option>AI-powered document management</option><option>Business process automation</option><option>Microsoft 365 &amp; digital workplace</option><option>Microsoft security assessment or workshop</option><option>A custom application or startup product</option><option>Digital commerce platform</option><option>Support Desk or Managed Services</option><option>Microsoft licensing</option><option>Engineering capacity / dedicated team</option></select></div>
 <div class="field"><label for="msg">Briefly, what are you trying to achieve?</label><textarea id="msg" name="msg"></textarea></div>
-<button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Request the call</button>
-<div class="form-success">Thank you. Your request has been recorded. We will come back to you within one working day.</div>
-<p class="form-note">This form is a front-end demonstration. Connect it to your mail service, CRM or Power Automate flow before going live.</p>
+<div class="field hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div><label class="consent"><input type="checkbox" name="consent" required><span>I agree that Consultim-IT may use these details to reply to my request and arrange a call.</span></label><button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Continue to book your call</button>
+<div class="form-status" role="status" aria-live="polite"></div><div class="form-error" role="alert">We could not send your request. Please try again or email <a href="mailto:business@consultim-it.com">business@consultim-it.com</a>.</div>
+<p class="form-note">After you send this, you will choose a time for the call in Microsoft Bookings.</p>
 </form></div></div>
 <div class="reveal">
 <div class="info-block"><h4>Tunisia, head office</h4><address>Av Yasser Arafet, R&Eacute;S Berrich<br>Sousse 4054, Tunisie</address></div>
