@@ -11,6 +11,25 @@
     });
   }
 
+  var langsw = document.querySelector('.langsw');
+  if (langsw) {
+    var lbtn = langsw.querySelector('.langsw-btn');
+    var setLang = function (open) {
+      langsw.classList.toggle('open', open);
+      lbtn.setAttribute('aria-expanded', open);
+    };
+    lbtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setLang(!langsw.classList.contains('open'));
+    });
+    document.addEventListener('click', function (e) {
+      if (!langsw.contains(e.target)) setLang(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && langsw.classList.contains('open')) { setLang(false); lbtn.focus(); }
+    });
+  }
+
   document.querySelectorAll('.acc-q').forEach(function (q) {
     q.addEventListener('click', function () {
       var acc = q.parentElement, panel = q.nextElementSibling;
