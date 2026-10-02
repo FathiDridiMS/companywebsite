@@ -498,3 +498,9 @@ footer.site a:hover{color:var(--amber)}
 /* Header nav: single-line labels, aligned in every language (DE/FR labels are longer). */
 .logo-text{white-space:nowrap}
 .nav-links>li>a{white-space:nowrap}
+
+/* "We use AI. We build AI." band: deeper indigo with a soft warm glow top-left and a lighter indigo bloom bottom-right. */
+.bg-navy-deep{background:
+  radial-gradient(900px 420px at 2% 0%,rgba(150,95,105,.38),transparent 62%),
+  radial-gradient(1000px 520px at 100% 100%,rgba(88,78,170,.5),transparent 60%),
+  #1B1A4C}
