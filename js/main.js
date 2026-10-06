@@ -125,7 +125,7 @@
      FORM_ENDPOINT is the URL of the Power Automate flow ("When an HTTP request is received" ->
      "Send an email (V2)" to business@consultim-it.com). While it is empty, visitors go straight to
      the booking page (Bookings collects their name and email itself). */
-  var BOOKING_URL = 'https://bookings.cloud.microsoft/bookwithme/user/1c5d01a02d78481c9f96da31aaf60afd%40consultim-it.com/meetingtype/GDlLBOOVQkm81cm6lvuwYg2?bookingcode=373f8b1f-deae-4001-a84f-10f535970fb7&anonymous&ismsaljsauthenabled';
+  var BOOKING_URL = 'https://bookings.cloud.microsoft/bookwithme/user/1c5d01a02d78481c9f96da31aaf60afd%40consultim-it.com?anonymous&ismsaljsauthenabled';
   var FORM_ENDPOINT = '';
 
   /* Booking CTAs: any link to contact.html whose label is a call/booking intent

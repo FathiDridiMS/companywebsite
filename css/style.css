@@ -24,7 +24,7 @@
   --s-gap:clamp(18px,2.2vw,26px);  /* grid gap */
 }
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
 body{margin:0;font-family:"Inter","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
   color:var(--body);background:#fff;line-height:1.65;font-size:16.5px;
   -webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -108,7 +108,7 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);
 .hero{padding-top:clamp(34px,3.5vw,54px);padding-bottom:var(--s-sec);border-bottom:1px solid var(--line);
   background:radial-gradient(1100px 460px at 78% -12%,rgba(66,73,140,.1),transparent 62%),
   linear-gradient(180deg,var(--primary-05),#fff 76%)}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,4vw,56px);align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;column-gap:clamp(32px,4vw,56px);row-gap:clamp(18px,2.5vw,28px);align-items:center}
 .hero h1{margin-bottom:.35em}.hero h1 .accent{color:var(--amber-dark)}
 .hero-sub{font-size:1.18rem;max-width:56ch;margin-bottom:1.6em}
 .hero-cta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-bottom:32px}
@@ -161,6 +161,8 @@ header.site{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.94);
 .breadcrumb a{color:#868C99}
 
 .grid{display:grid;gap:var(--s-gap)}
+.grid > *{min-width:0}
+h1,h2,h3{overflow-wrap:break-word}
 .g2{grid-template-columns:repeat(2,1fr)}
 .g3{grid-template-columns:repeat(3,1fr)}
 .g4{grid-template-columns:repeat(4,1fr)}
@@ -457,7 +459,7 @@ footer.site a:hover{color:#fff}
 /* Tablet: headline first, diagram after the CTAs.
    Overrides the earlier `.hero-visual{order:-1}` rule. */
 @media(max-width:1000px){
-  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .hero-grid{grid-template-columns:1fr;column-gap:34px;row-gap:20px}
   .hero-visual{order:2}
   .stackfig{max-width:440px;margin:0 auto}
 }
@@ -531,6 +533,11 @@ footer.site a:hover{color:#fff}
 .tech-copy .section-head{margin-bottom:22px}
 .tech-copy p{margin:0 0 1em}
 .orbit-wrap{container-type:inline-size;width:100%;max-width:580px;justify-self:center}
+/* Phones: clip the orbit visual so ring chips can never force sideways scrolling */
+@media(max-width:620px){
+  .orbit-wrap{overflow:hidden}
+  .btn{white-space:normal;text-align:center;line-height:1.4}
+}
 .orbit{position:relative;width:100%;aspect-ratio:1;
   background:radial-gradient(closest-side,rgba(66,73,140,.09),transparent 72%)}
 .ring{position:absolute;border-radius:50%;border:1px solid rgba(66,73,140,.14);animation:orbSpin 90s linear infinite}
@@ -1040,3 +1047,4 @@ footer.site.nf-foot > .wrap{padding-top:18px;padding-bottom:18px}
 /* Contact page: FAQ first, then the enquiry and RFP cards on a light band */
 .contact-info .info-block{background:#fff;border:1px solid var(--line);margin-bottom:0}
 .contact-info .info-block h4{font-size:1.05rem}
+
