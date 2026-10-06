@@ -1,6 +1,6 @@
 # Consultim-IT
 
-> A Microsoft partner and digital services company (ESN) founded in 2015,
+> A Microsoft partner and digital services company (ESN),
 > headquartered in Tunisia with an office in France. Consultim-IT builds AI into what it
 > delivers and uses AI in how it delivers, covering enterprise AI, Microsoft 365, document
 > management, cybersecurity, licensing, managed services and custom development.
@@ -11,12 +11,12 @@
 - Deutsch: https://consultim-it.com/de/
 
 ## Key facts
-- Founded: 2015 | Legal entity: Consultim-IT SARL (independent)
+- Legal entity: Consultim-IT SARL (independent)
 - Offices: Av Yasser Arafet, RÉS Berrich, Sousse 4054, Tunisia | 23 boulevard de l'Europe, 68100 Mulhouse, France
 - Contact: business@consultim-it.com | +216 98 75 39 75
 - Delivery languages: French, English, Arabic | Site languages: English, French, German
 - Time zone: Central European Time
-- Track record: 100+ projects delivered across 8+ countries
+- Track record: 200+ projects delivered across 8+ countries
 - Sectors: telecommunications, development banking, insurance, public sector,
   international organisations, energy, industry and manufacturing, agri-food
 
@@ -31,7 +31,7 @@
 ## Services
 - [Support Desk & Managed Services](https://consultim-it.com/managed-services.html): From SLA-based incident support for your internal IT team, to full tenant administration, governance and continuous improvement.
 - [Microsoft Licensing](https://consultim-it.com/licensing.html): Microsoft licence advisory, procurement and lifecycle management, from a partner that also architects and operates the platforms those licences run.
-- [Nearshore & multi-region delivery](https://consultim-it.com/engineering.html): Consultim-IT has delivered Microsoft and custom engineering since 2015 from Tunisia, with an office in France, for clients across Europe, the Gulf and Africa.
+- [Nearshore & multi-region delivery](https://consultim-it.com/engineering.html): Consultim-IT has delivered Microsoft and custom engineering from Tunisia, with an office in France, for clients across Europe, the Gulf and Africa.
 
 ## Evidence
 - [Case studies](https://consultim-it.com/case-studies.html): nine delivered engagements, described by sector and scale.

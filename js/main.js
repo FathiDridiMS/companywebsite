@@ -125,8 +125,21 @@
      FORM_ENDPOINT is the URL of the Power Automate flow ("When an HTTP request is received" ->
      "Send an email (V2)" to business@consultim-it.com). While it is empty, visitors go straight to
      the booking page (Bookings collects their name and email itself). */
-  var BOOKING_URL = 'https://bookings.cloud.microsoft/bookwithme/user/1c5d01a02d78481c9f96da31aaf60afd%40consultim-it.com/meetingtype/GDlLBOOVQkm81cm6lvuwYg2?bookingcode=de9d51d5-3a09-4f76-a5e4-484b9170574a&anonymous&ismsaljsauthenabled';
+  var BOOKING_URL = 'https://bookings.cloud.microsoft/bookwithme/user/1c5d01a02d78481c9f96da31aaf60afd%40consultim-it.com/meetingtype/GDlLBOOVQkm81cm6lvuwYg2?bookingcode=373f8b1f-deae-4001-a84f-10f535970fb7&anonymous&ismsaljsauthenabled';
   var FORM_ENDPOINT = '';
+
+  /* Booking CTAs: any link to contact.html whose label is a call/booking intent
+     opens Microsoft Bookings in a new tab instead of the contact page.
+     Keeps a single source of truth (BOOKING_URL) for EN/FR/DE without editing 60+ files.
+     Nav "Contact" links do not match and keep going to contact.html. */
+  var BOOKING_RE = /schedule|discovery|book a|make a call|\bcall\b|planifier|appel|rendez-vous|audit|assessment|gespr|termin|anruf|buchen|vereinbaren/i;
+  document.querySelectorAll('a[href*="contact.html"]').forEach(function (a) {
+    var t = (a.textContent || '').trim();
+    if (!t || !BOOKING_RE.test(t)) return;
+    a.setAttribute('href', BOOKING_URL);
+    a.setAttribute('target', '_blank');
+    a.setAttribute('rel', 'noopener');
+  });
 
   document.querySelectorAll('form[data-booking]').forEach(function (f) {
     var status = f.querySelector('.form-status');
