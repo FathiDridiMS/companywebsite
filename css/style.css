@@ -1115,3 +1115,7 @@ header.site{background:var(--paper);backdrop-filter:none}
 .sf-nodes circle:nth-child(6){animation-delay:-2.7s}
 @keyframes sfTwinkle{0%,100%{opacity:1}50%{opacity:.35}}
 @media(prefers-reduced-motion:reduce){.sf-l,.sf-beam,.sf-nodes circle{animation:none}}
+
+/* Logo: full wordmark SVG (header = navy, footer = light variant) */
+.logo img,.foot-logo img{height:30px;width:auto;display:block}
+@media(max-width:600px){.logo img{height:24px}}
