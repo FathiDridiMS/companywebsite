@@ -1100,3 +1100,18 @@ header.site{background:var(--paper);backdrop-filter:none}
 .langsw-btn:hover,.langsw.open .langsw-btn{box-shadow:none}
 .orbit-core{background:var(--navy);box-shadow:none;animation:none}
 .pillar .tag,.chip{border-radius:2px}
+
+/* Hero figure: layers float on their own rhythm, beam breathes, nodes twinkle */
+.sf-l{animation:sfFloat 6.5s ease-in-out infinite}
+.sf-l1{--amp:-3px;animation-delay:-.6s}
+.sf-l2{--amp:-8px;animation-delay:-2.2s}
+.sf-l3{--amp:-14px;animation-delay:-4s}
+@keyframes sfFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(var(--amp))}}
+.sf-beam{animation:sfBeam 4.2s ease-in-out infinite}
+@keyframes sfBeam{0%,100%{opacity:.25}50%{opacity:.7}}
+.sf-nodes circle{animation:sfTwinkle 3.2s ease-in-out infinite}
+.sf-nodes circle:nth-child(2){animation-delay:-.5s}.sf-nodes circle:nth-child(3){animation-delay:-1.1s}
+.sf-nodes circle:nth-child(4){animation-delay:-1.7s}.sf-nodes circle:nth-child(5){animation-delay:-2.2s}
+.sf-nodes circle:nth-child(6){animation-delay:-2.7s}
+@keyframes sfTwinkle{0%,100%{opacity:1}50%{opacity:.35}}
+@media(prefers-reduced-motion:reduce){.sf-l,.sf-beam,.sf-nodes circle{animation:none}}

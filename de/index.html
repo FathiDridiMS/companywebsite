@@ -67,23 +67,23 @@
 <linearGradient id="sfBeam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#F2A03D" stop-opacity="0"/><stop offset="1" stop-color="#F2A03D" stop-opacity=".75"/></linearGradient>
 <filter id="sfShadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="12" stdDeviation="13" flood-color="#2D3470" flood-opacity=".2"/></filter>
 </defs>
-<rect x="166" y="104" width="8" height="186" fill="url(#sfBeam)" opacity=".45" rx="4"/>
-<g filter="url(#sfShadow)"><polygon points="170,228 314,300 170,372 26,300" fill="url(#sfBot)"/></g>
+<rect class="sf-beam" x="166" y="104" width="8" height="186" fill="url(#sfBeam)" opacity=".45" rx="4"/>
+<g class="sf-l sf-l1"><g filter="url(#sfShadow)"><polygon points="170,228 314,300 170,372 26,300" fill="url(#sfBot)"/></g>
 <g opacity=".5"><circle cx="129" cy="303" r="3" fill="#6B72A8"/><circle cx="170" cy="324" r="3" fill="#6B72A8"/><circle cx="211" cy="303" r="3" fill="#6B72A8"/>
 <path d="M129 303 L170 324 L211 303" stroke="#6B72A8" stroke-width="1.4" fill="none"/></g>
-<g filter="url(#sfShadow)"><polygon points="170,150 314,222 170,294 26,222" fill="url(#sfMid)"/></g>
+</g><g class="sf-l sf-l2"><g filter="url(#sfShadow)"><polygon points="170,150 314,222 170,294 26,222" fill="url(#sfMid)"/></g>
 <g opacity=".62" stroke="#EEF0F7" stroke-width="1.5" fill="none"><path d="M134 224 L170 242 L206 224"/><path d="M134 213 L170 231 L206 213"/></g>
-<g filter="url(#sfShadow)"><polygon points="170,72 314,144 170,216 26,144" fill="url(#sfTop)"/></g>
+</g><g class="sf-l sf-l3"><g filter="url(#sfShadow)"><polygon points="170,72 314,144 170,216 26,144" fill="url(#sfTop)"/></g>
 <g stroke="#8E95C9" stroke-width="1.3" opacity=".75">
 <path d="M170 144 L126 122"/><path d="M170 144 L214 122"/><path d="M170 144 L121 168"/><path d="M170 144 L219 168"/>
 <path d="M170 144 L170 107"/><path d="M170 144 L170 181"/><path d="M126 122 L170 107"/><path d="M214 122 L170 107"/>
 <path d="M121 168 L170 181"/><path d="M219 168 L170 181"/></g>
-<g fill="#C3C6DF"><circle cx="126" cy="122" r="4"/><circle cx="214" cy="122" r="4"/><circle cx="121" cy="168" r="4"/>
+<g class="sf-nodes" fill="#C3C6DF"><circle cx="126" cy="122" r="4"/><circle cx="214" cy="122" r="4"/><circle cx="121" cy="168" r="4"/>
 <circle cx="219" cy="168" r="4"/><circle cx="170" cy="107" r="4"/><circle cx="170" cy="181" r="4"/></g>
 <circle cx="170" cy="144" r="9" fill="#F2A03D"><animate attributeName="r" values="9;11.5;9" dur="3.4s" repeatCount="indefinite"/></circle>
 <circle cx="170" cy="144" r="9" fill="none" stroke="#F2A03D" stroke-width="1.6" opacity=".5">
 <animate attributeName="r" values="9;30" dur="3.4s" repeatCount="indefinite"/>
-<animate attributeName="opacity" values=".5;0" dur="3.4s" repeatCount="indefinite"/></circle></svg></div>
+<animate attributeName="opacity" values=".5;0" dur="3.4s" repeatCount="indefinite"/></circle></g></svg></div>
 <ul class="stackfig-keys"><li class="k-ai"><b>KI &amp; Agenten</b><span>RAG &middot; MCP &middot; Copilot</span></li><li class="k-app"><b>Anwendungen &amp; Automatisierung</b><span>Portale &middot; Power Platform</span></li><li class="k-sec"><b>Sicheres Fundament</b><span>Microsoft 365 &middot; Entra &middot; Azure</span></li></ul></div></div>
 </div></section>
 
