@@ -1226,3 +1226,15 @@ section.has-ill-bg>.wrap{position:relative;z-index:1}
 @media(max-width:620px){.hero-slide{align-content:start}.hero-slide .hero-cta{margin-bottom:18px}}
 .foot-bottom a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 .foot-bottom a:hover{color:#fff}
+/* Dark banner photos: longer, softer fade so the edge doesn't read as a grey band */
+.hero-photo--dark img{-webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.12) 22%,rgba(0,0,0,.55) 42%,#000 66%);
+                              mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.12) 22%,rgba(0,0,0,.55) 42%,#000 66%)}
+@media(max-width:900px){.hero-photo--dark img{-webkit-mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.4) 30%,#000 70%);mask-image:linear-gradient(180deg,transparent 0,rgba(0,0,0,.4) 30%,#000 70%)}}
+/* Dark banner variant (AI page): background matches the near-black photo, so the
+   fade lands on the same colour and no grey band appears. */
+.page-detail .page-hero.page-hero--dark{background:#030409;border-bottom:0}
+.page-hero--dark h1{color:#fff}
+.page-hero--dark .lead{color:#B9BDD6}
+.page-hero--dark .eyebrow{color:var(--amber)}
+.page-hero--dark .hero-photo img{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 30%);mask-image:linear-gradient(90deg,transparent 0,#000 30%)}
+@media(max-width:900px){.page-hero--dark .hero-photo img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}}
