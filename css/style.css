@@ -1281,3 +1281,6 @@ header.site{background:var(--paper);backdrop-filter:none}
   .section-head.ill-feature>.ill{grid-row:1/-1}
   .section-head.ill-feature>p+p{margin-top:12px}
 }
+/* "Let's talk" band: own colour (light brand lavender) so it never merges with
+   a grey section above it (e.g. the FAQ) */
+.cta-band.cta-modern{background:#E8E9F4;border-top:1px solid #D9DBEC}
