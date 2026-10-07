@@ -1314,3 +1314,5 @@ header.site{background:var(--paper);backdrop-filter:none}
 }
 @media(min-width:861px){html .faq-split .section-head.has-ill:not(.ill-feature)>.ill{max-height:none;margin-bottom:0}}
 @media(min-width:861px){html .faq-split .section-head.has-ill:not(.ill-feature){align-items:flex-start}}
+/* Licensing: centre the illustration above the Licence Review card */
+.page-modern .split:has(.form-card) > .reveal:last-child:has(.ill-aside) > .ill-aside{align-self:center;margin-left:auto;margin-right:auto}
