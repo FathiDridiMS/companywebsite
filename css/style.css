@@ -1273,3 +1273,11 @@ header.site{background:var(--paper);backdrop-filter:none}
   .cta-panel.has-ill{grid-template-columns:minmax(0,1fr)}
   .cta-panel.has-ill .cta-ill{grid-column:1}
 }
+/* feature split: allow up to 5 text items in the left column (e.g. two paragraphs) */
+@media(min-width:861px){
+  .section-head.has-ill.ill-feature{grid-template-rows:1fr repeat(5,auto) 1fr}
+  .section-head.ill-feature>:nth-child(4):not(.ill){grid-row:5}
+  .section-head.ill-feature>:nth-child(5):not(.ill){grid-row:6}
+  .section-head.ill-feature>.ill{grid-row:1/-1}
+  .section-head.ill-feature>p+p{margin-top:12px}
+}
