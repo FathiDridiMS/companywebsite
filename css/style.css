@@ -1190,11 +1190,7 @@ header.site{background:var(--paper);backdrop-filter:none}
 .section-head.has-ill>.ill{max-height:300px}
 .ill-aside{width:min(300px,80%)}
 .cta-panel.has-ill{grid-template-columns:minmax(0,1.4fr) 250px minmax(0,.85fr)}
-/* Large, faint illustration behind the text of a navy band */
-section.has-ill-bg{position:relative;overflow:hidden}
-section.has-ill-bg>.wrap{position:relative;z-index:1}
-.ill-bg{position:absolute;right:2%;top:5%;width:min(42vw,560px);height:auto;opacity:.22;pointer-events:none;z-index:0}
-@media(max-width:860px){.ill-bg{width:110vw;right:-30%;opacity:.1}}
+
 
 /* ============================================================
    HOME HERO SLIDER: slides stacked in one grid cell (height =
