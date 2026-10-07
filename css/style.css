@@ -1144,3 +1144,23 @@ header.site{background:var(--paper);backdrop-filter:none}
                           mask-image:linear-gradient(180deg,transparent 0,#000 45%)}
 }
 
+
+/* ============================================================
+   ILLUSTRATIONS (unDraw, recoloured to the palette)
+   Sit beside a section heading (or under it in FAQ columns).
+   Sizes: .ill-s / .ill-m / .ill-l on the .section-head.
+   ============================================================ */
+.section-head.has-ill{--ill-w:260px;display:grid;max-width:none;
+  grid-template-columns:minmax(0,72ch) var(--ill-w);justify-content:space-between;
+  column-gap:clamp(32px,6vw,96px);align-items:end}
+.section-head.ill-s{--ill-w:200px}.section-head.ill-l{--ill-w:320px}
+.section-head.has-ill>:not(.ill){grid-column:1}
+.section-head.has-ill>.ill{grid-column:2;grid-row:1/span 6;align-self:end;
+  width:100%;height:auto;max-height:230px;object-fit:contain;object-position:right bottom}
+/* FAQ: heading column is narrow, the illustration sits under the heading */
+.faq-split .section-head.has-ill{display:block}
+.faq-split .section-head.has-ill>.ill{display:block;width:var(--ill-w);max-width:100%;max-height:none;margin-top:clamp(24px,3vw,40px)}
+@media(max-width:860px){
+  .section-head.has-ill{display:block}
+  .section-head.has-ill>.ill{display:block;width:min(var(--ill-w),62%);max-height:none;margin-top:24px}
+}
