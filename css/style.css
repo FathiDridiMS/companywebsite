@@ -1316,3 +1316,24 @@ header.site{background:var(--paper);backdrop-filter:none}
 @media(min-width:861px){html .faq-split .section-head.has-ill:not(.ill-feature){align-items:flex-start}}
 /* Licensing: centre the illustration above the Licence Review card */
 .page-modern .split:has(.form-card) > .reveal:last-child:has(.ill-aside) > .ill-aside{align-self:center;margin-left:auto;margin-right:auto}
+
+/* ============================================================
+   HOME HERO = one screen. On desktop the slider fills exactly the
+   space under the 75px header, and its contents scale with the
+   screen height, so the whole block is visible without scrolling
+   and the first scroll goes straight to the next section.
+   ============================================================ */
+@media(min-width:1001px){
+  .hero.hero-slider{min-height:calc(100vh - 75px);min-height:calc(100svh - 75px);
+    padding-top:clamp(14px,3vh,40px);padding-bottom:clamp(14px,3vh,36px);
+    display:flex;flex-direction:column;justify-content:center}
+  .hero-slider h1,.hero-slider .slide-title{font-size:clamp(1.9rem,min(4.4vw,6.2vh),3.5rem)}
+  .hero-slider .hero-sub{font-size:clamp(1rem,2.1vh,1.18rem);margin-bottom:clamp(14px,2.4vh,26px)}
+  .hero-slider .hero-cta{margin-bottom:clamp(10px,2.4vh,28px)}
+  .hero-slider .hero-visual{padding-top:0;align-self:center}
+  .hero-slider .stackfig{max-width:min(520px,64vh)}
+  .hero-slider .slide-ill{max-width:min(520px,56vh)}
+  .hero-slider .hero-grid{row-gap:clamp(10px,2vh,24px)}
+  .hero-slider .proof-pills span{padding:clamp(6px,1vh,9px) 18px}
+  .hero-slider .hero-controls{margin-top:clamp(8px,1.8vh,22px)}
+}
