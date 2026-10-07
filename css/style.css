@@ -1164,3 +1164,21 @@ header.site{background:var(--paper);backdrop-filter:none}
   .section-head.has-ill{display:block}
   .section-head.has-ill>.ill{display:block;width:min(var(--ill-w),62%);max-height:none;margin-top:24px}
 }
+/* Illustration above the side card (e.g. Licensing "Request a Licence Review") */
+.ill-aside{display:block;width:min(240px,70%);height:auto;margin:0 0 24px}
+/* "Let's talk" band: text | illustration | buttons */
+.cta-panel.has-ill{grid-template-columns:minmax(0,1.4fr) 200px minmax(0,.85fr)}
+.cta-panel.has-ill .cta-ill{grid-column:2;grid-row:1/span 3;align-self:center;justify-self:center;width:100%;height:auto}
+.cta-panel.has-ill .cta-row{grid-column:3}
+@media(max-width:1000px){
+  .cta-panel.has-ill{grid-template-columns:1.4fr 1fr}
+  .cta-panel.has-ill .cta-ill{display:none}
+  .cta-panel.has-ill .cta-row{grid-column:2}
+}
+@media(max-width:860px){
+  .cta-panel.has-ill{grid-template-columns:1fr}
+  .cta-panel.has-ill .cta-row{grid-column:1}
+}
+.page-modern .split:has(.form-card) > .reveal:last-child:has(.ill-aside){display:flex;flex-direction:column;align-items:flex-start;gap:0}
+.page-modern .split:has(.form-card) > .reveal > .ill-aside + .form-card{flex:0 0 auto;width:100%}
+@media(max-width:860px){.ill-aside{width:170px}}
