@@ -1284,3 +1284,13 @@ header.site{background:var(--paper);backdrop-filter:none}
 /* "Let's talk" band: own colour (light brand lavender) so it never merges with
    a grey section above it (e.g. the FAQ) */
 .cta-band.cta-modern{background:#E8E9F4;border-top:1px solid #D9DBEC}
+/* FAQ: left column (heading + illustration) is exactly as tall as the questions;
+   the illustration takes the remaining height, so its bottom lines up with the
+   last question box */
+@media(min-width:861px){
+  .faq-split:has(.section-head.has-ill){align-items:stretch}
+  .faq-split .section-head.has-ill{display:flex;flex-direction:column;align-self:stretch;margin-bottom:0}
+  .faq-split .section-head.has-ill>.ill{flex:1 1 0;height:0;min-height:140px;width:100%;max-width:var(--ill-w);
+    max-height:none;margin-top:clamp(18px,2vw,28px);object-fit:contain;object-position:left bottom}
+}
+@media(min-width:861px){.faq-split .section-head.has-ill{align-items:flex-start;text-align:left}}
