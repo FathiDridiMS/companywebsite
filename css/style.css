@@ -1350,3 +1350,16 @@ header.site{background:var(--paper);backdrop-filter:none}
   .hero.hero-slider{position:relative;padding-bottom:clamp(44px,7vh,64px)}
   .hero-slider .hero-controls{position:absolute;left:0;right:0;bottom:clamp(12px,2.6vh,26px);margin:0 auto}
 }
+/* Heading-only sections: illustration vertically centred on the heading (no hanging) */
+@media(min-width:861px){
+  html .section-head.has-ill:not(.ill-feature):not(:has(p)){align-items:center}
+  html .section-head.has-ill:not(.ill-feature):not(:has(p))>.ill{max-height:170px;margin-bottom:0;align-self:center}
+  /* FAQ columns: illustration centred (horizontally and in the free height) under the heading */
+  html body .faq-split .section-head.has-ill:not(.ill-feature)>.ill{max-height:none;align-self:center;object-position:center center}
+}
+@media(min-width:861px){
+  html .section-head.has-ill:not(.ill-feature):not(:has(p)){grid-template-rows:1fr auto auto 1fr;row-gap:0}
+  html .section-head.has-ill:not(.ill-feature):not(:has(p))>:nth-child(1):not(.ill){grid-row:2}
+  html .section-head.has-ill:not(.ill-feature):not(:has(p))>:nth-child(2):not(.ill){grid-row:3}
+  html .section-head.has-ill:not(.ill-feature):not(:has(p))>.ill{grid-row:1/5}
+}
