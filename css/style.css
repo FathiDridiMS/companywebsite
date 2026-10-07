@@ -1294,3 +1294,23 @@ header.site{background:var(--paper);backdrop-filter:none}
     max-height:none;margin-top:clamp(18px,2vw,28px);object-fit:contain;object-position:left bottom}
 }
 @media(min-width:861px){.faq-split .section-head.has-ill{align-items:flex-start;text-align:left}}
+
+/* ============================================================
+   SPACING PASS
+   ============================================================ */
+/* 1) Section rhythm a little tighter (96px -> ~80px top/bottom at desktop) */
+:root{--s-sec:clamp(56px,5.8vw,84px);--s-sec-tight:clamp(36px,3.8vw,56px)}
+/* 2) Heading-only sections (eyebrow + title, no intro text) with an illustration:
+      medium illustration that hangs into the heading-to-content gap instead of
+      pushing the content down */
+@media(min-width:861px){
+  .section-head.has-ill:not(.ill-feature):not(:has(p)){align-items:end}
+  .section-head.has-ill:not(.ill-feature):not(:has(p))>.ill{max-height:210px;margin-bottom:calc(var(--s-head) * -1 + 8px)}
+}
+/* 3) 40/60 feature illustrations slightly smaller */
+@media(min-width:861px){
+  .section-head.ill-feature>.ill{max-width:560px}
+  .section-head.has-ill.ill-feature{min-height:clamp(340px,30vw,420px)}
+}
+@media(min-width:861px){html .faq-split .section-head.has-ill:not(.ill-feature)>.ill{max-height:none;margin-bottom:0}}
+@media(min-width:861px){html .faq-split .section-head.has-ill:not(.ill-feature){align-items:flex-start}}
