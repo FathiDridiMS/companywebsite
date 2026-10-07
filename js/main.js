@@ -251,3 +251,51 @@
   var td = target && target.querySelector('details.case-more');
   if (td) { td.open = true; target.scrollIntoView(); }
 })();
+
+/* Home hero slider: arrows, dots, keyboard, swipe; autoplay pauses on hover/focus
+   and is off when the visitor prefers reduced motion. */
+(function () {
+  var root = document.querySelector('.hero-slider');
+  if (!root) return;
+  var slides = root.querySelectorAll('.hero-slide');
+  var dots = root.querySelectorAll('.hs-dot');
+  if (slides.length < 2) return;
+  var i = 0, timer = null, DELAY = 7000;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function show(n) {
+    i = (n + slides.length) % slides.length;
+    slides.forEach(function (s, k) {
+      var on = k === i;
+      s.classList.toggle('is-active', on);
+      s.setAttribute('aria-hidden', on ? 'false' : 'true');
+      s.querySelectorAll('a,button').forEach(function (el) { el.tabIndex = on ? 0 : -1; });
+    });
+    dots.forEach(function (d, k) {
+      d.classList.toggle('is-active', k === i);
+      d.setAttribute('aria-current', k === i ? 'true' : 'false');
+    });
+  }
+  function start() { if (!reduce) { stop(); timer = setInterval(function () { show(i + 1); }, DELAY); } }
+  function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+  root.querySelector('.hs-prev').addEventListener('click', function () { show(i - 1); start(); });
+  root.querySelector('.hs-next').addEventListener('click', function () { show(i + 1); start(); });
+  dots.forEach(function (d, k) { d.addEventListener('click', function () { show(k); start(); }); });
+  root.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { show(i - 1); start(); }
+    if (e.key === 'ArrowRight') { show(i + 1); start(); }
+  });
+  root.addEventListener('mouseenter', stop);
+  root.addEventListener('mouseleave', start);
+  root.addEventListener('focusin', stop);
+  root.addEventListener('focusout', start);
+  var x0 = null;
+  root.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  root.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 50) { show(dx < 0 ? i + 1 : i - 1); start(); }
+  });
+  show(0); start();
+})();
