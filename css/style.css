@@ -1337,3 +1337,16 @@ header.site{background:var(--paper);backdrop-filter:none}
   .hero-slider .proof-pills span{padding:clamp(6px,1vh,9px) 18px}
   .hero-slider .hero-controls{margin-top:clamp(8px,1.8vh,22px)}
 }
+
+/* Slider controls: minimal, bottom-left of the hero */
+.hero-controls{justify-content:flex-start;gap:6px}
+.hs-arrow{width:28px;height:28px;border:0;background:transparent;color:var(--primary-75);font-size:.95rem;
+  display:inline-grid;place-items:center;padding:0;transition:color .2s var(--ease)}
+.hs-arrow:hover{color:var(--navy);border:0}
+.hs-dots{gap:6px;margin:0 4px}
+.hs-dot{width:16px;height:2px;background:var(--primary-25)}
+.hs-dot.is-active{width:28px;background:var(--amber)}
+@media(min-width:1001px){
+  .hero.hero-slider{position:relative;padding-bottom:clamp(44px,7vh,64px)}
+  .hero-slider .hero-controls{position:absolute;left:0;right:0;bottom:clamp(12px,2.6vh,26px);margin:0 auto}
+}
