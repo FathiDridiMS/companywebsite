@@ -2224,3 +2224,129 @@ html .fq-cta .btn{border-radius:4px;padding:11px 20px;font-size:.9rem}
   .eng-stats{gap:16px 28px}
 }
 
+/* ============================================================
+   CLOSING SECTIONS (Oct 2026). Dark bands are always full-bleed.
+   ============================================================ */
+.close-dark h2,.close-case h2,.close-eng h2,.close-lic h2,.close-ms h2,.close-sol h2{font-size:clamp(2rem,3.8vw,3rem);font-weight:600;line-height:1.1}
+.close-case .accent-amber,.close-eng .accent-amber,.close-lic .accent-amber,.close-ms .accent-amber,.close-sol .accent-amber{color:var(--amber-dark)}
+html .close-case .btn,html .close-eng .btn,html .close-lic .btn,html .close-ms .btn,html .close-sol .btn,html .close-dark .btn{border-radius:4px}
+html .close-case .btn-primary,html .close-eng .btn-primary,html .close-lic .btn-primary,html .close-sol .btn-primary,html .close-dark .btn-primary{box-shadow:0 10px 24px rgba(242,160,61,.35)}
+
+/* dark full-bleed band (home, about, solutions, security) */
+html section.close-dark{background:var(--bg-dark);color:#C9CCE6}
+.close-dark h2{color:#fff;margin:0 0 .35em}.close-dark .accent-amber{color:var(--amber)}
+.close-dark .eyebrow{color:var(--amber)}
+.cd-grid{display:grid;grid-template-columns:1.6fr auto;gap:24px 48px;align-items:end}
+.cd-grid p{margin:0;color:#C9CCE6;max-width:62ch}
+.cd-btns{display:flex;gap:12px;flex-wrap:wrap}
+html .close-dark .btn-ghost-light{border-color:rgba(255,255,255,.55)}
+.cd-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14)}
+.cd-pills span{display:inline-flex;align-items:center;gap:8px;font-size:.84rem;font-weight:700;color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:20px;padding:7px 15px}
+.cd-pills svg{width:15px;height:15px}
+.close-center{text-align:center}
+.close-center .crumbs{justify-content:center}
+.close-center .cc-sub{color:#D5D8EC;margin:0 0 24px}
+.cc-checks{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 26px;margin-top:26px;font-size:.84rem;font-weight:700;color:#D5D8EC}
+.cc-checks span{white-space:nowrap}.cc-checks span::first-letter{color:var(--amber)}
+.close-dark .crumbs,.close-dark .crumbs a{color:#A9AEC9}.close-dark .crumbs span{color:#fff}
+
+/* case studies */
+html section.close-case{background:#fff}
+.cc-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,48px);align-items:center}
+.cc-note{background:linear-gradient(160deg,#2D3470,#1E2160);border-radius:16px;padding:30px 32px;color:#E1E3F2;box-shadow:0 24px 50px rgba(30,33,96,.25)}
+.cc-note .sv-eyebrow{color:var(--amber)}.cc-note p:last-child{margin:0;line-height:1.65}
+html .close-case .btn-outline{border-color:var(--navy);color:var(--navy);background:#fff}
+
+/* engineering */
+html section.close-eng{background:var(--bg-light)}
+.close-eng h2{padding-bottom:20px;border-bottom:1px solid #E4E5EE;margin-bottom:24px}
+.ce-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+.ce-chips{display:flex;flex-wrap:wrap;gap:10px}
+.ce-chips span{font-size:.86rem;font-weight:700;color:var(--navy);background:#fff;border:1px solid #E4E5EE;border-radius:7px;padding:9px 15px}
+html section.eng-ai-band{background:#fff}
+.eng-ai-band h2{font-size:clamp(1.8rem,3.4vw,2.7rem)}
+
+/* licensing */
+html section.close-lic{background:#F3F3F8}
+.cl-card{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(24px,4vw,48px);align-items:center;padding:clamp(28px,4vw,46px);border-radius:18px;
+  background:linear-gradient(#fff,#fff) padding-box,linear-gradient(120deg,#2D3470,#F2A03D 50%,#A8AAF0) border-box;border:2px solid transparent}
+.cl-main p:not(.eyebrow){color:#6B7080;margin:0 0 22px}
+.cl-q .sv-eyebrow{color:var(--amber-dark)}
+.cl-q ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.cl-q li{background:#F5F5FA;border-left:3px solid var(--amber);border-radius:6px;padding:12px 16px;font-size:.88rem;font-weight:700;color:var(--navy);line-height:1.4}
+
+/* it support */
+html section.close-ms{background:#fff}
+.cm-card{display:grid;grid-template-columns:1.4fr 1fr;border-radius:18px;overflow:hidden;border:1px solid #ECECF3;box-shadow:0 24px 50px rgba(45,52,112,.1)}
+.cm-main{padding:clamp(28px,4vw,44px);background:#fff}
+.cm-main h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+.cm-main p{color:#6B7080;margin:0}
+.cm-side{background:linear-gradient(160deg,#F2A03D,#E8892A);padding:clamp(24px,3.5vw,40px);display:flex;flex-direction:column;justify-content:center;gap:12px}
+.cm-lv{background:#FFF8EF;border-radius:10px;padding:12px 16px}
+.cm-lv small{display:block;font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-dark)}
+.cm-lv b{color:var(--navy);font-size:.94rem}
+html .close-ms .cm-dark{background:var(--navy);color:#fff;border-color:var(--navy);justify-content:flex-start;margin-top:6px;padding:15px 22px}
+html .close-ms .cm-dark:hover{background:#1E2160;color:#fff}
+
+/* solution pages */
+html section.close-sol{background:var(--bg-light)}
+.cs-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,4vw,56px);align-items:center;padding:clamp(30px,4vw,48px) 0;border-top:1px solid #E4E5EE;border-bottom:1px solid #E4E5EE}
+.cs-card{background:#fff;border:1px solid #ECECF3;border-radius:16px;padding:28px 30px;box-shadow:0 24px 50px rgba(45,52,112,.1)}
+.cs-card p{color:#4A4F58;margin:0 0 20px}
+.ca-browse{display:block;margin-top:14px;font-size:.82rem;color:#6B7080}
+
+@media(max-width:900px){
+  .cd-grid,.cc-grid,.cl-card,.cm-card,.cs-grid{grid-template-columns:1fr}
+}
+.close-lic h2 .accent-amber{display:block}
+.split:has(> .reveal:only-child){grid-template-columns:1fr}.split > .reveal:only-child{max-width:820px}
+
+/* ---------- Enterprise AI hero v2: secured AI core ---------- */
+.sv-ai2{position:relative;max-width:540px;padding-bottom:44px}
+.sv-ai2 svg{width:100%;height:auto;overflow:visible;filter:drop-shadow(0 30px 50px rgba(45,52,112,.12))}
+.ai2-orbit{transform-origin:260px 240px;animation:ai2Spin 40s linear infinite}
+@keyframes ai2Spin{to{transform:rotate(360deg)}}
+.ai2-core{transform-origin:260px 240px;animation:ai2Pulse 3.4s ease-in-out infinite}
+@keyframes ai2Pulse{50%{transform:scale(1.06)}}
+.sva-sat{animation:ai2Float 4s ease-in-out infinite;animation-delay:var(--d)}
+@keyframes ai2Float{50%{transform:translateY(-4px)}}
+.ai2-pill{position:absolute;display:inline-flex;align-items:center;gap:10px;font-size:.92rem;font-weight:700;padding:11px 26px 11px 18px;border-radius:24px;
+  background:#fff;color:var(--navy);border:1px solid #E4E5EE;box-shadow:0 10px 24px rgba(45,52,112,.1);white-space:nowrap}
+.ai2-pill i{width:11px;height:11px;border-radius:50%;background:#8C90F0}
+.ai2-pill.p1{left:0;bottom:46px}
+.ai2-pill.p2{left:50%;bottom:8px;transform:translateX(-62%);background:var(--navy);color:#fff;border-color:var(--navy)}.ai2-pill.p2 i{background:var(--amber)}
+.ai2-pill.p3{right:0;bottom:46px}.ai2-pill.p3 i{background:var(--navy)}
+
+/* ---------- Automation hero v2: tangle vs. flow ---------- */
+.sv-auto2{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px;max-width:560px}
+.au2-col{display:flex;flex-direction:column;align-items:center;gap:22px}
+.au2-card{position:relative;width:100%;aspect-ratio:.52;border-radius:28px;border:1px solid #E4E5EE;box-shadow:0 24px 50px rgba(45,52,112,.1)}
+.au2-today{background:linear-gradient(180deg,#FBFBFE,#F1F1F8);display:flex;align-items:center;justify-content:center;padding:18px}
+.au2-today svg{width:100%;height:100%}
+.au2-tangle{animation:au2Dash 6s linear infinite}
+@keyframes au2Dash{to{stroke-dashoffset:-140}}
+.au2-arrow{width:60px;height:80px;margin-bottom:56px}
+.au2-flow{background:#fff;display:flex;justify-content:center;padding:34px 0}
+.au2-gear{position:absolute;right:14px;top:14px;width:58px;height:58px;border-radius:50%;background:#FEF1DD;display:flex;align-items:center;justify-content:center}
+.au2-gear svg{width:34px;height:34px;fill:var(--amber);animation:ai2Spin 9s linear infinite}
+.au2-line{position:relative;display:flex;flex-direction:column;justify-content:space-between;align-items:center;height:100%}
+.au2-line::before{content:"";position:absolute;top:30px;bottom:30px;left:50%;width:4px;transform:translateX(-50%);border-radius:2px;
+  background:linear-gradient(180deg,#2D3470,#6B6FC4 40%,#A08070 60%,#F2A03D)}
+.au2-line span{position:relative;z-index:1;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px rgba(45,52,112,.18)}
+.au2-line svg{width:26px;height:26px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.au2-line .n1{background:var(--navy)}.au2-line .n2{background:#5B60B0}.au2-line .n3{background:#8C90F0}.au2-line .n4{background:var(--amber)}
+.au2-line .n4 svg{stroke:var(--navy);stroke-width:2.6}
+.au2-lbl{font-size:.92rem;font-weight:700;color:#6B7080;background:#fff;border:1px solid #E4E5EE;border-radius:24px;padding:10px 0;width:76%;text-align:center}
+.au2-lbl.on{background:var(--navy);border-color:var(--navy);color:#fff}
+
+@media(max-width:560px){
+  .ai2-pill{font-size:.74rem;padding:8px 14px 8px 12px}.ai2-pill.p1,.ai2-pill.p3{bottom:52px}
+  .au2-arrow{width:34px;height:50px}.au2-line span{width:42px;height:42px}.au2-line svg{width:20px;height:20px}
+  .au2-gear{width:40px;height:40px}.au2-gear svg{width:24px;height:24px}.au2-lbl{font-size:.78rem}
+}
+@media(prefers-reduced-motion:reduce){.ai2-orbit,.ai2-core,.sva-sat,.au2-tangle,.au2-gear svg{animation:none}}
+.au2-flow{padding:84px 0 34px}
+.au2-today{padding:14px 10px}
+.cl-card{background:#fff;border:0}
+.cm-side{background:#F3F3F8;border-left:1px solid #ECECF3}
+.cm-lv{background:#fff;border:1px solid #E4E5EE}
